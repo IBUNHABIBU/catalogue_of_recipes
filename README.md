@@ -10,8 +10,8 @@
     <p align="center">🖩 </p>
   </a>
 
-  <h2 align="center"> REACT CALCULATOR</h2>
-  <h3 align="center"> This project is part of the Microverse curriculum in the React.js module to design a fully functional calculator with all the basic functions</h3>
+  <h2 align="center"> CATALOGUE OF STATICS REACT CAPSTONE PROJECT</h2>
+  <h3 align="center"> - It's a real-world-like project, built with business specifications that will look really nice in your portfolio; and</h3>
 
   <p align="center">
     <a href="https://github.com/IBUNHABIBU/catalogue_of_statistic/issues">Report Bug</a>
