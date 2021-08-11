@@ -1,7 +1,7 @@
 import { actionTypes } from '../costants';
 
 const initialState = [];
-export const mealReducer = (state, { type, payload }) => {
+export const mealReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.SET_RECIPE:
       return [...state, ...payload];
