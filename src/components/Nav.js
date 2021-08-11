@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Toolbar } from '@material-ui/core';
+import { AppBar, Typography, Toolbar } from '@material-ui/core';
+import { AccountCircleIcon } from '@material-ui/icons/AccountCircle';
 
 const Nav = () => {
  return (
