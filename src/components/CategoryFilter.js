@@ -4,21 +4,19 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
-import { actionTypes } from '../redux/costants';
-import myStyle from '../stylesheet/style';
+import actionTypes from '../redux/costants';
 
 const CategoryFilter = ({ handleFilter }) => {
-  const classes = myStyle();
+  // const classes = myStyle();
   const all = ['All'];
   const categories = all.concat(actionTypes.bookCategories);
   const cat = categories.map((item) => <MenuItem value={item} key={item}>{item}</MenuItem>);
   return (
-    <div className={classes.cat}>
-      <label htmlFor="Category" className={classes.label}>
-        <FormControl variant="outlined" className={classes.formControl}>
+    <div>
+      <label htmlFor="Category">
+        <FormControl variant="outlined">
           <InputLabel id="demo-simple-select-outlined-label">CATEGORIES</InputLabel>
           <Select
-            className={classes.catInput}
             labelId="demo-simple-select-outlined-label"
             id="category"
             onChange={handleFilter}

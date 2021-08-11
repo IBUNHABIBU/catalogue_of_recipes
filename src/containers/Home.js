@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Home = () => {
   const fetchProduct = async () => {
-    const response = await axios.get('https://themealdb.com/api/json/v1/1/lookup.php?i=52772')
+    const response = await axios.get('https://themealdb.com/api/json/v1/1/categories.php')
       .catch((error) => console.log(error));
     console.log(response.data);
   };

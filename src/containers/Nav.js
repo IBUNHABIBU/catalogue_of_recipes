@@ -1,17 +1,17 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import {
   AppBar, Toolbar, Typography,
 } from '@material-ui/core';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import myStyle from '../stylesheet/style';
+// import myStyle from '../stylesheet/style';
 import CategoryFilter from '../components/CategoryFilter';
-import { changeFilter } from '../actions/index';
+// import { changeFilter } from '../actions/index';
 
 const Nav = () => {
-  const classes = myStyle();
-  const dispatch = useDispatch();
-  const handleCategoryChange = (e) => {
+  // const classes = myStyle();
+  // const dispatch = useDispatch();
+  const handleCategoryChange = () => {
     // dispatch(changeFilter(e.target.value));
   };
 
