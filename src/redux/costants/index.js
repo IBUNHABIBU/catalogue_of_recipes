@@ -1,7 +1,8 @@
 const actionTypes = {
-  SET_PRODUCT: 'SET_PRODUCT',
-  SELECTED_PRODUCT: 'SELECTED_PRODUCT',
-  REMOVE_SELECTED_PRODUCT: 'REMOVE_SELECTED_PRODUCT',
+  SET_RECIPE: 'SET_RECIPE',
+  SELECTED_RECIPE: 'SELECTED_RECIPE',
+  SEARCH_RECIPE: 'SEARCH_RECIPE',
+  CHANGE_FILTER: 'CHANGE_FILTER',
   bookCategories: ['All', 'Beef', 'Chicken', 'Dessert', 'Lamb', 'Seafood', 'Breakfast', 'Vegetarian', 'Starter'],
 };
 
