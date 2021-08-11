@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setRecipe } from '../redux/actions/index';
 
 const Home = () => {
-  const food = useSelector((state) => state.food);
   const dispatch = useDispatch();
   const fetchProduct = async () => {
     const response = await axios.get('https://themealdb.com/api/json/v1/1/categories.php')
@@ -16,10 +15,6 @@ const Home = () => {
   //   fetchProduct();
   // };
   useEffect(() => {
-    // effect
-    // return () => {
-    //   cleanup
-    // }
     fetchProduct();
   }, []);
   return (
