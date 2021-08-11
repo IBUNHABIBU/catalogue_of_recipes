@@ -4,13 +4,13 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
-import { bookCategories } from '../constants/constants';
+import { actionTypes } from '../redux/costants';
 import myStyle from '../stylesheet/style';
 
 const CategoryFilter = ({ handleFilter }) => {
   const classes = myStyle();
   const all = ['All'];
-  const categories = all.concat(bookCategories);
+  const categories = all.concat(actionTypes.bookCategories);
   const cat = categories.map((item) => <MenuItem value={item} key={item}>{item}</MenuItem>);
   return (
     <div className={classes.cat}>
