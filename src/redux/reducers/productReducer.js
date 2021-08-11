@@ -1,17 +1,17 @@
-import { actionTypes } from "../costants/actionTypes";
+import { actionTypes } from '../costants/actionTypes';
 
 const initialState = {
   products: [
-   
-  ]
-}
-export const productReducer = (state, {type, payload}) => {
+
+  ],
+};
+export const productReducer = (state, { type, payload }) => {
   switch (key) {
-   case actionTypes.SET_PRODUCT:
+    case actionTypes.SET_PRODUCT:
       return state;
-    break;
-  
-   default:
-    return state;
+      break;
+
+    default:
+      return state;
   }
-}
+};

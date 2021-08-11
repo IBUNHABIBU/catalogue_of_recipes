@@ -1,14 +1,12 @@
-import './App.css';
-import Home from './components/Home';
+import React from 'react';
 import Nav from './components/Nav';
+import Home from './components/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <Nav />
-      <Home />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Nav />
+    <Home />
+  </div>
+);
 
 export default App;
