@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setRecipe } from '../redux/actions/index';
+import FoodListing from './FoodListing';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -11,15 +11,15 @@ const Home = () => {
       .catch((error) => console.log(error));
     dispatch(setRecipe(response.data));
   };
-  // const handleClick = () => {
-  //   fetchProduct();
-  // };
+
   useEffect(() => {
     fetchProduct();
   }, []);
+
   return (
     <div>
       <h1>This is the food api</h1>
+      <FoodListing />
     </div>
   );
 };
