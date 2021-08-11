@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from './components/Nav';
-import Home from './components/Home';
+import Nav from './containers/Nav';
+import Home from './containers/Home';
 
 const App = () => (
   <div>
