@@ -10,7 +10,7 @@ export const selectedRecipe = (meal) => ({
   payload: meal,
 });
 
-export const changeFilter = (filter) => {
-  type: actionTypes.changeFilter,
-  filter 
-}
+export const changeFilter = (filter) => ({
+  type: actionTypes.CHANGE_FILTER,
+  payload: filter,
+});
