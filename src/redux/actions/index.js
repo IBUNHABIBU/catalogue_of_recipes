@@ -1,11 +1,11 @@
 import { actionTypes } from '../costants';
 
-export const setRecipe = (meal) => ({
-  type: actionTypes.SET_PRODUCT,
-  payload: products,
+export const setRecipe = (meals) => ({
+  type: actionTypes.SET_RECIPE,
+  payload: meals,
 });
 
-export const selectedProduct = (product) => ({
-  type: actionTypes.SELECTED_PRODUCT,
-  payload: product,
+export const selectedRecipe = (meal) => ({
+  type: actionTypes.SELECTED_RECIPE,
+  payload: meal,
 });
