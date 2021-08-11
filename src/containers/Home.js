@@ -20,7 +20,7 @@ const Home = () => {
     // return () => {
     //   cleanup
     // }
-    dispatch(setRecipe);
+    fetchProduct();
   }, []);
   return (
     <div>
