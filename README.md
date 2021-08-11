@@ -43,6 +43,7 @@ The objective of this project is to build a simple calculator using Reactjs. It 
 ### Features
 
   - It has all the basic calculating function i.e addition, subraction, division, multiplication and parcentage/
+  - put the api url in the browser and visualize the data
 
 
 <!-- BUILD WITH -->

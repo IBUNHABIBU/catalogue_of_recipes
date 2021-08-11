@@ -1,12 +1,16 @@
 import { actionTypes } from '../costants';
 
-const initialState = {};
+const initialState = {
+  categories: [],
+};
 const mealReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.SET_RECIPE:
-      return [...state, ...payload];
+      return { ...state, categories: payload };
     case actionTypes.SELECTED_RECIPE:
-      return [...state, ...payload];
+      return {
+        ...state, ...payload,
+      };
     default:
       return state;
   }
