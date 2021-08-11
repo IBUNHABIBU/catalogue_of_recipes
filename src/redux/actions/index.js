@@ -9,3 +9,8 @@ export const selectedRecipe = (meal) => ({
   type: actionTypes.SELECTED_RECIPE,
   payload: meal,
 });
+
+export const changeFilter = (filter) => {
+  type: actionTypes.changeFilter,
+  filter 
+}
