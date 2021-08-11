@@ -12,7 +12,7 @@ const Home = () => {
   //   fetchProduct();
   // };
   useEffect(() => {
-    effect
+    // effect
     return () => {
       cleanup
     }
