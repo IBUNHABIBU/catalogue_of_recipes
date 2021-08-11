@@ -3,9 +3,9 @@ import axios from 'axios';
 
 const Home = () => {
   const fetchProduct = async () => {
-    const response = await axios.get('https://themealdb.com/api/json/v1/1/search.php?f=a')
+    const response = await axios.get('https://themealdb.com/api/json/v1/1/lookup.php?i=52772')
       .catch((error) => console.log(error));
-    console.log(response);
+    console.log(response.data);
   };
   const handleClick = () => {
     fetchProduct();
