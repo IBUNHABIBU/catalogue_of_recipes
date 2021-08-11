@@ -44,6 +44,8 @@ The objective of this project is to build a simple calculator using Reactjs. It 
 
   - It has all the basic calculating function i.e addition, subraction, division, multiplication and parcentage/
   - put the api url in the browser and visualize the data
+   - Line 12:7:  Missing "key" prop for element in iterator  react/jsx-key
+    the above error is removed by adding key prop to the root element
 
 
 <!-- BUILD WITH -->
