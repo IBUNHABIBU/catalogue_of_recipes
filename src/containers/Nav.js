@@ -20,12 +20,12 @@ const Nav = () => {
       <AppBar position="static" color="transparent">
         <Toolbar>
           <Typography variant="h2">
-            BookStore CMS
-          </Typography>
-          <Typography edge="start" variant="h3">
-            BOOKS
+            Home
           </Typography>
           <CategoryFilter handleFilter={handleCategoryChange} />
+          <Typography edge="start" variant="h3">
+            About
+          </Typography>
           <AccountCircleIcon fontSize="large" />
         </Toolbar>
       </AppBar>
