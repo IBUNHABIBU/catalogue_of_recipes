@@ -1,3 +1,4 @@
+import { Grid } from '@material-ui/core';
 import React from 'react';
 import { useSelector } from 'react-redux';
 
@@ -8,12 +9,15 @@ const FoodListing = () => {
       idCategory, strCategory, strCategoryThumb, strCategoryDescription,
     } = meal;
     return (
-      <div key={idCategory}>
-        <h1>FoodListing</h1>
+      <Grid container spacing = {1}>
+        <Grid container item xs={12} spacing={3}>
+        <div key={idCategory}>
         <p>{strCategory}</p>
         <img src={strCategoryThumb} alt={strCategoryThumb} />
         <p>{strCategoryDescription}</p>
       </div>
+        </Grid>
+      </Grid>
     );
   });
 
