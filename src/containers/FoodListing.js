@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: red[500],
   },
+  grid: {
+    // height: '400px',
+  },
 }));
 
 const FoodListing = () => {
@@ -43,7 +46,7 @@ const FoodListing = () => {
             idCategory, strCategory, strCategoryThumb, strCategoryDescription,
           } = meal;
           return (
-            <Grid item lg={3} key={idCategory}>
+            <Grid item lg={3} key={idCategory} className={classes.grid}>
               <Paper>
                 <Card className={classes.root}>
                   <CardHeader
@@ -57,7 +60,7 @@ const FoodListing = () => {
                   />
                   <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">
-                      {strCategoryDescription}
+                      {strCategoryDescription.substring(0, 200)}
                     </Typography>
                   </CardContent>
                 </Card>
