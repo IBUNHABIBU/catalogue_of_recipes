@@ -1,20 +1,16 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
 import {
   AppBar, Toolbar, Typography,
 } from '@material-ui/core';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-// import myStyle from '../stylesheet/style';
 import CategoryFilter from '../components/CategoryFilter';
-// import { changeFilter } from '../actions/index';
+import useStyles from '../stylesheets/grid';
 
 const Nav = () => {
-  // const classes = myStyle();
-  // const dispatch = useDispatch();
   const handleCategoryChange = () => {
     // dispatch(changeFilter(e.target.value));
   };
-
+  const classes = useStyles();
   return (
     <div>
       <AppBar position="static" color="transparent">
@@ -22,7 +18,7 @@ const Nav = () => {
           <Typography variant="h2">
             Home
           </Typography>
-          <CategoryFilter handleFilter={handleCategoryChange} />
+          <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
           <Typography edge="start" variant="h3">
             About
           </Typography>

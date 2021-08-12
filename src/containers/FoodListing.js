@@ -1,14 +1,13 @@
 import { Grid, Paper } from '@material-ui/core';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-
+import useStyles from '../stylesheets/grid';
 
 const FoodListing = () => {
   const classes = useStyles();
@@ -22,24 +21,25 @@ const FoodListing = () => {
           } = meal;
           return (
             <Grid item lg={3} key={idCategory}>
-              <Paper>
-                <Card className={classes.root}>
-                  <CardHeader
-                    title={strCategory}
-                    subheader="September 14, 2016"
-                  />
-                  <CardMedia
-                    className={classes.media}
-                    image={strCategoryThumb}
-                    title="Paella dish"
-                  />
-                  <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      {strCategoryDescription.substring(0, 200)}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Paper>
+              <Link to={`/category/${idCategory}`}>
+                <Paper spacing={3}>
+                  <Card className={classes.root}>
+                    <CardHeader
+                      title={strCategory}
+                    />
+                    <CardMedia
+                      className={classes.media}
+                      image={strCategoryThumb}
+                      title="Paella dish"
+                    />
+                    <CardContent>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                        {strCategoryDescription.substring(0, 200)}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Paper>
+              </Link>
             </Grid>
           );
         })
