@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 const FoodListing = () => {
   const meals = useSelector((state) => state.allFoods.categories);
-  console.log(meals);
   const renderList = meals.map((meal) => {
     const {
       idCategory, strCategory, strCategoryThumb, strCategoryDescription,
@@ -19,9 +18,9 @@ const FoodListing = () => {
   });
 
   return (
-   <>
-    { renderList }
-   </>
+    <div>
+      { renderList }
+    </div>
   );
 };
 
