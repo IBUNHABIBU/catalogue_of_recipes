@@ -9,13 +9,13 @@ const FoodListing = () => {
       idCategory, strCategory, strCategoryThumb, strCategoryDescription,
     } = meal;
     return (
-      <Grid container spacing = {1}>
+      <Grid container spacing={1} key={idCategory}>
         <Grid container item xs={12} spacing={3}>
-        <div key={idCategory}>
-        <p>{strCategory}</p>
-        <img src={strCategoryThumb} alt={strCategoryThumb} />
-        <p>{strCategoryDescription}</p>
-      </div>
+          <Paper>
+            <p>{strCategory}</p>
+            <img src={strCategoryThumb} alt={strCategoryThumb} />
+            <p>{strCategoryDescription}</p>
+          </Paper>
         </Grid>
       </Grid>
     );
