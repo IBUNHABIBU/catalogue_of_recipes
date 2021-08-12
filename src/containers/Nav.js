@@ -10,7 +10,7 @@ import useStyles from '../stylesheets/grid';
 const Nav = () => {
   const handleCategoryChange = () => {
     // dispatch(changeFilter(e.target.value));
-    
+
   };
   const classes = useStyles();
   return (
