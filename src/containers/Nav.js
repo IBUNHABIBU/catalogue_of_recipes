@@ -6,10 +6,13 @@ import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CategoryFilter from '../components/CategoryFilter';
 import useStyles from '../stylesheets/grid';
+import { useDispatch } from 'react-redux';
+import { changeFilter } from './../redux/actions/index';
 
 const Nav = () => {
+  const dispatch = useDispatch()
   const handleCategoryChange = () => {
-    // dispatch(changeFilter(e.target.value));
+    dispatch(changeFilter(e.target.value));
   };
   const classes = useStyles();
   return (
