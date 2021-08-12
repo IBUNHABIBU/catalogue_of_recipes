@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: 'none',
   },
+  navbar: {
+   
+  }
 }));
 
 export default useStyles;

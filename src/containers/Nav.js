@@ -13,15 +13,15 @@ const Nav = () => {
   };
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.navbar}>
       <AppBar position="static" color="transparent">
         <Toolbar>
-          <Link to="/">
+          <Link to="/" className={classes.link}>
             <Typography variant="h5">
               Home
             </Typography>
           </Link>
-          <Link to="/category/1" className={classes.link}>
+          <Link to="/category/1" className={classes.link} className={classes.link}>
             <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
           </Link>
           <Link to="/about">
