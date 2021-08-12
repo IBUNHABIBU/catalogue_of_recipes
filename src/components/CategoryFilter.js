@@ -5,9 +5,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import { actionTypes } from '../redux/costants';
+import useStyles from '../stylesheets/grid';
 
 const CategoryFilter = ({ handleFilter }) => {
-  // const classes = myStyle();
+  const classes = useStyles();
   const all = ['All'];
   const categories = all.concat(actionTypes.bookCategories);
   const cat = categories.map((item) => <MenuItem value={item} key={item}>{item}</MenuItem>);
@@ -21,6 +22,7 @@ const CategoryFilter = ({ handleFilter }) => {
             id="category"
             onChange={handleFilter}
             label="Age"
+            className={classes.catInput}
           >
             {cat}
           </Select>

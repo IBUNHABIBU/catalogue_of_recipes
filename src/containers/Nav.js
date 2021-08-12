@@ -2,6 +2,7 @@ import React from 'react';
 import {
   AppBar, Toolbar, Typography,
 } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CategoryFilter from '../components/CategoryFilter';
 import useStyles from '../stylesheets/grid';
@@ -9,6 +10,7 @@ import useStyles from '../stylesheets/grid';
 const Nav = () => {
   const handleCategoryChange = () => {
     // dispatch(changeFilter(e.target.value));
+    
   };
   const classes = useStyles();
   return (
@@ -18,7 +20,9 @@ const Nav = () => {
           <Typography variant="h2">
             Home
           </Typography>
-          <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
+          <Link to="/category/1">
+            <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
+          </Link>
           <Typography edge="start" variant="h3">
             About
           </Typography>
