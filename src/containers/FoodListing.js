@@ -30,9 +30,6 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: red[500],
   },
-  grid: {
-    // height: '400px',
-  },
 }));
 
 const FoodListing = () => {
@@ -46,7 +43,7 @@ const FoodListing = () => {
             idCategory, strCategory, strCategoryThumb, strCategoryDescription,
           } = meal;
           return (
-            <Grid item lg={3} key={idCategory} className={classes.grid}>
+            <Grid item lg={3} key={idCategory}>
               <Paper>
                 <Card className={classes.root}>
                   <CardHeader
