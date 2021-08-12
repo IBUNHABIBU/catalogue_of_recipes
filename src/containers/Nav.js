@@ -3,15 +3,15 @@ import {
   AppBar, Toolbar, Typography,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CategoryFilter from '../components/CategoryFilter';
 import useStyles from '../stylesheets/grid';
-import { useDispatch } from 'react-redux';
-import { changeFilter } from './../redux/actions/index';
+import { changeFilter } from '../redux/actions/index';
 
 const Nav = () => {
-  const dispatch = useDispatch()
-  const handleCategoryChange = () => {
+  const dispatch = useDispatch();
+  const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
   };
   const classes = useStyles();
