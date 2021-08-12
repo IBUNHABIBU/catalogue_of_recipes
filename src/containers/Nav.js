@@ -10,22 +10,25 @@ import useStyles from '../stylesheets/grid';
 const Nav = () => {
   const handleCategoryChange = () => {
     // dispatch(changeFilter(e.target.value));
-
   };
   const classes = useStyles();
   return (
     <div>
       <AppBar position="static" color="transparent">
         <Toolbar>
-          <Typography variant="h2">
-            Home
-          </Typography>
-          <Link to="/category/1">
+          <Link to="/">
+            <Typography variant="h5">
+              Home
+            </Typography>
+          </Link>
+          <Link to="/category/1" className={classes.link}>
             <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
           </Link>
-          <Typography edge="start" variant="h3">
-            About
-          </Typography>
+          <Link to="/about">
+            <Typography edge="start" variant="h5">
+              About
+            </Typography>
+          </Link>
           <AccountCircleIcon fontSize="large" />
         </Toolbar>
       </AppBar>
