@@ -16,6 +16,9 @@ const Nav = () => {
     <div className={classes.navbar}>
       <AppBar position="static" color="transparent">
         <Toolbar>
+          <Typography className={classes.title} variant="h6" noWrap>
+            RECIPE ZONE
+          </Typography>
           <Link to="/" className={classes.link}>
             <Typography variant="h5">
               Home

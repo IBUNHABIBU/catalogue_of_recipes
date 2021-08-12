@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     height: '80px',
+    padding: '0.3rem',
   },
 }));
 
