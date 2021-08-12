@@ -18,7 +18,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1>This is the food api</h1>
       <FoodListing />
     </div>
   );
