@@ -25,7 +25,24 @@ const FoodListing = () => {
   //   });
   //   </Grid>
   const renderList = (
-    <Grid container />
+    <Grid container>
+      {
+        meals.map((meal) => {
+          const {
+                  idCategory, strCategory, strCategoryThumb, strCategoryDescription,
+                } = meal;
+          return (
+            <Grid item lg={3} key={idCategory}>
+              <Paper>
+                <p>{strCategory}</p>
+                <img src={strCategoryThumb} alt={strCategoryThumb} />
+                <p>{strCategoryDescription}</p>
+              </Paper>
+            </Grid>
+          )
+        })
+      }
+    </Grid>
   );
   return (
     <div>
