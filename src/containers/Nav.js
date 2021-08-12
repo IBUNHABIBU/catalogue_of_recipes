@@ -21,10 +21,10 @@ const Nav = () => {
               Home
             </Typography>
           </Link>
-          <Link to="/category/1" className={classes.link} className={classes.link}>
+          <Link to="/category/1" className={classes.link}>
             <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
           </Link>
-          <Link to="/about">
+          <Link to="/about" className={classes.link}>
             <Typography edge="start" variant="h5">
               About
             </Typography>

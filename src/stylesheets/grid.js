@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   navbar: {
-   
-  }
+    height: '80px',
+  },
 }));
 
 export default useStyles;
