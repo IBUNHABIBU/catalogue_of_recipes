@@ -4,7 +4,7 @@ import mealReducer from './mealReducer';
 
 const reducers = combineReducers({
   allFoods: mealReducer,
-  filter: filterReducer
+  filter: filterReducer,
 });
 
 export default reducers;
