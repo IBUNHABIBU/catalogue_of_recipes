@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
   catInput: {
     width: '9.5rem',
     height: '3.41rem',
-    textTransform: 'uppercase',
   },
   link: {
     textDecoration: 'none',
