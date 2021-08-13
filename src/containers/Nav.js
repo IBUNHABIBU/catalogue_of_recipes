@@ -5,29 +5,39 @@ import {
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import CategoryFilter from '../components/CategoryFilter';
-import useStyles from '../stylesheets/grid';
+import useStyles from '../stylesheets/styles';
 import { changeFilter } from '../redux/actions/index';
 
 const Nav = () => {
+  let filteredCat;
+  let id;
   const filter = useSelector((state) => state.filter);
   const cat = useSelector((state) => state.allFoods.categories);
-  // // console.log('Use selector', cat);
-  // console.log('filter', filter, cat);
-  const filteredCat = cat.filter((item) => item.strCategory === filter);
-  console.log(filteredCat, 'id');
+  console.log('Use selector', cat);
+  if (filter === 'All') {
+    filteredCat = 'All';
+  } else {
+    filteredCat = cat.find((item) => item.strCategory === filter);
+  }
+  if (filteredCat === 'All') {
+    id = 1;
+  } else {
+    id = filteredCat.idCategory;
+  }
   const dispatch = useDispatch();
   const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
   };
   const classes = useStyles();
   return (
+
     <div className={classes.navbar}>
       <AppBar position="static" color="transparent" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          <Typography className={classes.title} variant="h6" noWrap>
-            RECIPE ZONE
-          </Typography>
           <Link to="/" className={classes.link}>
+            <Typography className={classes.logo} variant="h6" noWrap>
+              RECIPE ZONE
+            </Typography>
             <Typography variant="h5">
               Home
             </Typography>
@@ -37,7 +47,8 @@ const Nav = () => {
               About
             </Typography>
           </Link>
-          <Link to={`/category/${filteredCat.idCategory}`} className={classes.link}>
+          {}
+          <Link to={`/category/${id}`} className={classes.link}>
             <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
           </Link>
         </Toolbar>

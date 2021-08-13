@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import { actionTypes } from '../redux/costants';
-import useStyles from '../stylesheets/grid';
+import useStyles from '../stylesheets/styles';
 
 const CategoryFilter = ({ handleFilter }) => {
   const classes = useStyles();
@@ -16,7 +16,7 @@ const CategoryFilter = ({ handleFilter }) => {
     <div>
       <label htmlFor="Category">
         <FormControl variant="outlined">
-          <InputLabel id="demo-simple-select-outlined-label">CATEGORIES</InputLabel>
+          <InputLabel id="demo-simple-select-outlined-label" className={classes.catlabel}>CATEGORIES</InputLabel>
           <Select
             labelId="demo-simple-select-outlined-label"
             id="category"
