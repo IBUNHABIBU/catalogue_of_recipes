@@ -13,7 +13,6 @@ const Nav = () => {
   let id;
   const filter = useSelector((state) => state.filter);
   const cat = useSelector((state) => state.allFoods.categories);
-  console.log('Use selector', cat);
   if (filter === 'All') {
     filteredCat = 'All';
   } else {
