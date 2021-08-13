@@ -33,6 +33,17 @@ const useStyles = makeStyles((theme) => ({
     height: '80px',
     padding: '0.3rem',
   },
+  appbar: {
+    width: '100%',
+    height: '5.938rem',
+    margin: '0 0 2.375rem',
+    padding: '0.901rem 6.188rem 1.688rem 0.001rem',
+    // backgroundColor: 'red',
+  },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'space-around',
+  },
 }));
 
 export default useStyles;

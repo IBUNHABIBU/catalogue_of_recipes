@@ -15,7 +15,7 @@ const Nav = () => {
   // // console.log('Use selector', cat);
   // console.log('filter', filter, cat);
   const filteredCat = cat.filter((item) => item.strCategory === filter);
-  console.log(id, 'id');
+  console.log(filteredCat, 'id');
   const dispatch = useDispatch();
   const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
@@ -23,8 +23,8 @@ const Nav = () => {
   const classes = useStyles();
   return (
     <div className={classes.navbar}>
-      <AppBar position="static" color="transparent">
-        <Toolbar>
+      <AppBar position="static" color="transparent" className={classes.appbar}>
+        <Toolbar className={classes.toolbar}>
           <Typography className={classes.title} variant="h6" noWrap>
             RECIPE ZONE
           </Typography>
