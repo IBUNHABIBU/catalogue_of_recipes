@@ -18,12 +18,10 @@ const CategoryListing = () => {
   const category = filteredCat.strCategory;
   const dispatch = useDispatch();
   const foodList = useSelector((state) => state.category.meals);
-  console.log('foodlisting by category', foodList);
   const classes = useStyles();
 
   const fetchByCategory = async () => {
-    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
-      .catch((error) => console.log(error));
+    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
     dispatch(selectedRecipe(response.data));
   };
 
@@ -67,7 +65,7 @@ const CategoryListing = () => {
   );
   return (
     <div>
-      <h1>these are food recipe sorted by category</h1>
+      <h1>these are food recipe that are in the same category</h1>
       { displayByCategory }
     </div>
   );

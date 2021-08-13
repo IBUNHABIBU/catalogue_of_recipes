@@ -33,10 +33,10 @@ const Nav = () => {
     <div className={classes.navbar}>
       <AppBar position="static" color="transparent" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
+          <Typography className={classes.logo} variant="h6" noWrap>
+            RECIPE ZONE
+          </Typography>
           <Link to="/" className={classes.link}>
-            <Typography className={classes.logo} variant="h6" noWrap>
-              RECIPE ZONE
-            </Typography>
             <Typography variant="h5">
               Home
             </Typography>
