@@ -20,8 +20,8 @@
 </p>
 
 
-![screenshot](https://github.com/IBUNHABIBU/catalogue_of_statistic/blob/testing/public/home.PNG)
-![screenshot](https://github.com/IBUNHABIBU/catalogue_of_statistic/blob/testing/public/calculator.PNG)
+![screenshot](https://github.com/IBUNHABIBU/catalogue_of_statistic/blob/feature/public/home.PNG)
+<!-- ![screenshot](https://github.com/IBUNHABIBU/catalogue_of_statistic/blob/testing/public/calculator.PNG) -->
 
 ## Table of Contents
 
