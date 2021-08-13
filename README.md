@@ -11,7 +11,7 @@
   </a>
 
   <h2 align="center"> CATALOGUE OF STATICS REACT CAPSTONE PROJECT</h2>
-  <h3 align="center"> - It's a real-world-like project, built with business specifications that will look really nice in your portfolio; and</h3>
+  <h3 align="center"> Is the food recipe website that you can fetch defferent food recipe from api</h3>
 
   <p align="center">
     <a href="https://github.com/IBUNHABIBU/catalogue_of_statistic/issues">Report Bug</a>
@@ -42,10 +42,9 @@ The objective of this project is to build a simple calculator using Reactjs. It 
 
 ### Features
 
-  - It has all the basic calculating function i.e addition, subraction, division, multiplication and parcentage/
-  - put the api url in the browser and visualize the data
-   - Line 12:7:  Missing "key" prop for element in iterator  react/jsx-key
-    the above error is removed by adding key prop to the root element
+  - It display all foods meal in all category
+  - It display all food meal within the same category
+  - It display a meal when selected
 
 
 <!-- BUILD WITH -->
@@ -101,7 +100,7 @@ Enjoy playing it.
 <!-- CONTACT -->
 
 
-## link to  [Live Demo ](https://mathics.herokuapp.com/)
+## link to  [Live Demo ](https://slm-foodrecipe.herokuapp.com/)
 
 ## Authors
 
