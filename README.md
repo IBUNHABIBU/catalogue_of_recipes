@@ -36,7 +36,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The objective of this project is to build a simple calculator using Reactjs. It is fully fuctional calculator having all basic operation like addition, subtruction, multiplication, division, percentage, +/- and AC.
+Is the website that fetch different food recipe from the api
 
 ### Story
 
