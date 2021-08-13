@@ -5,7 +5,8 @@ import { useSelector } from 'react-redux';
 const CategoryListing = () => {
   const { categoryId } = useParams();
   const categories = useSelector((state) => state.allFoods.categories);
-  console.log(categories, `its id is ${categoryId}`);
+  const filteredCat = categories.find((item) => item.idCategory === categoryId);
+  console.log(categories, `its id is ${categoryId} cat is ${filteredCat.strCategory}`);
   return (
     <div />
   );
