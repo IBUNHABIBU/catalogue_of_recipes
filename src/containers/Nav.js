@@ -4,7 +4,6 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CategoryFilter from '../components/CategoryFilter';
 import useStyles from '../stylesheets/grid';
 import { changeFilter } from '../redux/actions/index';
@@ -33,15 +32,14 @@ const Nav = () => {
               Home
             </Typography>
           </Link>
-          <Link to={`/category/${filteredCat.idCategory}`} className={classes.link}>
-            <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
-          </Link>
           <Link to="/about" className={classes.link}>
             <Typography edge="start" variant="h5">
               About
             </Typography>
           </Link>
-          <AccountCircleIcon fontSize="large" />
+          <Link to={`/category/${filteredCat.idCategory}`} className={classes.link}>
+            <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

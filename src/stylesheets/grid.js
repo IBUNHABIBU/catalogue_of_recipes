@@ -25,9 +25,11 @@ const useStyles = makeStyles((theme) => ({
   catInput: {
     width: '9.5rem',
     height: '3.41rem',
+    color: 'white',
   },
   link: {
     textDecoration: 'none',
+    color: 'white',
   },
   navbar: {
     height: '80px',
@@ -38,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     height: '5.938rem',
     margin: '0 0 2.375rem',
     padding: '0.901rem 6.188rem 1.688rem 0.001rem',
-    // backgroundColor: 'red',
+    backgroundColor: '#f94f90',
   },
   toolbar: {
     display: 'flex',
