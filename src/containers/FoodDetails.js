@@ -26,7 +26,7 @@ const FoodDetails = () => {
 
   const classes = useStyles();
   return (
-    <Card className={classes.details} key={mealDetails.idMeal}>
+    <Card className={classes.details} key={details.idMeal}>
       <CardActionArea>
         <CardMedia
           className={classes.detailmedia}

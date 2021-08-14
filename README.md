@@ -36,9 +36,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Is the website that fetch different food recipe from the api
-
-### Story
+Is the website that fetch different food recipe from the MealDb api
 
 ### Features
 
@@ -118,6 +116,8 @@ Give a :star: if you like this project!
 ## Acknowledgments
 Credits go to  <!--Mr Christian Ceamatu who helped me when I'm stuck. -->
 all my standup team for their help.
+
+- The [The MealDb API](https://www.themealdb.com/api.php) api for using their api for free
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
