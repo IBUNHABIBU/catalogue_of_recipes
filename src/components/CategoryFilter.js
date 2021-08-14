@@ -9,8 +9,7 @@ import useStyles from '../stylesheets/styles';
 
 const CategoryFilter = ({ handleFilter }) => {
   const classes = useStyles();
-  const all = ['All'];
-  const categories = all.concat(actionTypes.bookCategories);
+  const categories = actionTypes.bookCategories;
   const cat = categories.map((item) => <MenuItem value={item} key={item}>{item}</MenuItem>);
   return (
     <div>

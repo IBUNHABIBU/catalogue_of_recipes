@@ -34,7 +34,7 @@ const CategoryListing = () => {
           } = list;
           return (
             <Grid item lg={3} key={idMeal}>
-              <Link to={`/category/${idMeal}`} className={classes.link}>
+              <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
                 <Paper spacing={3}>
                   <Card className={classes.root}>
                     <CardHeader

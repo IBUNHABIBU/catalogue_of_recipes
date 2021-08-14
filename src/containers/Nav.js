@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  AppBar, Toolbar, Typography,
+  AppBar, Toolbar, Typography, IconButton,
 } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import CategoryFilter from '../components/CategoryFilter';
@@ -9,21 +10,9 @@ import useStyles from '../stylesheets/styles';
 import { changeFilter } from '../redux/actions/index';
 
 const Nav = () => {
-  let filteredCat;
-  let id;
   const filter = useSelector((state) => state.filter);
-  const cat = useSelector((state) => state.allFoods.categories);
-  if (filter === 'All') {
-    filteredCat = 'All';
-  } else {
-    filteredCat = cat.find((item) => item.strCategory === filter);
-  }
-  if (filteredCat === 'All') {
-    id = 1;
-  } else {
-    id = filteredCat.idCategory;
-  }
   const dispatch = useDispatch();
+  console.log(filter);
   const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
   };
@@ -33,6 +22,9 @@ const Nav = () => {
     <div className={classes.navbar}>
       <AppBar position="static" color="transparent" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
           <Typography className={classes.logo} variant="h6" noWrap>
             RECIPE ZONE
           </Typography>
@@ -46,8 +38,9 @@ const Nav = () => {
               About
             </Typography>
           </Link>
-          {}
-          <Link to={`/category/${id}`} className={classes.link}>
+          {
+          }
+          <Link to={`/category/${filter}`} className={classes.link}>
             <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
           </Link>
         </Toolbar>

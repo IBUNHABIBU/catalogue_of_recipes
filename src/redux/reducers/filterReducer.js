@@ -1,6 +1,6 @@
 import { actionTypes } from '../costants';
 
-const initialState = 'All';
+const initialState = 'Beef';
 const filterReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.CHANGE_FILTER:
