@@ -6,7 +6,7 @@ import mealReducer from './mealReducer';
 const reducers = combineReducers({
   allFoods: mealReducer,
   filter: filterReducer,
-  category: mealCategoryReducer,
+  categories: mealCategoryReducer,
 });
 
 export default reducers;

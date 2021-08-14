@@ -1,7 +1,7 @@
 import { actionTypes } from '../costants';
 
 const initialState = {
-  // category: [],
+  meals: [],
 };
 const mealCategoryReducer = (state = initialState, { type, payload }) => {
   switch (type) {

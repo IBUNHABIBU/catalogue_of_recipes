@@ -13,7 +13,7 @@ const FoodListing = () => {
   const classes = useStyles();
   const meals = useSelector((state) => state.allFoods.categories);
   const renderList = (
-    <Grid container spacing={12}>
+    <Grid container spacing={1}>
       {
         meals.map((meal) => {
           const {
@@ -21,7 +21,7 @@ const FoodListing = () => {
           } = meal;
           return (
             <Grid item lg={3} key={idCategory}>
-              <Link to={`/category/${idCategory}`} className={classes.link}>
+              <Link to={`/category/${strCategory}`} className={classes.link}>
                 <Paper spacing={3}>
                   <Card className={classes.root}>
                     <CardHeader

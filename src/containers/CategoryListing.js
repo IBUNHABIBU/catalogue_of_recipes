@@ -8,29 +8,25 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { selectedRecipe } from '../redux/actions';
+import { selectRecipe } from '../redux/actions';
 import useStyles from '../stylesheets/styles';
 
 const CategoryListing = () => {
-  const { categoryId } = useParams();
-  const categories = useSelector((state) => state.allFoods.categories);
-  const filteredCat = categories.find((item) => item.idCategory === categoryId);
-  const category = filteredCat.strCategory;
+  const { categoryName } = useParams();
   const dispatch = useDispatch();
-  const foodList = useSelector((state) => state.category.meals);
+  const foodList = useSelector((state) => state.categories.meals);
   const classes = useStyles();
-
   const fetchByCategory = async () => {
-    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
-    dispatch(selectedRecipe(response.data));
+    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
+    dispatch(selectRecipe(response.data));
   };
 
   useEffect(() => {
     fetchByCategory();
-  }, [categoryId]);
+  }, [categoryName]);
 
   const displayByCategory = (
-    <Grid container spacing={12}>
+    <Grid container spacing={3}>
       {
         foodList.map((list) => {
           const {
