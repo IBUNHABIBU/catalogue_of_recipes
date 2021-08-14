@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
   },
   detailmedia: {
-    height: 0,
+    height: '100%',
   },
   expand: {
     transform: 'rotate(0deg)',

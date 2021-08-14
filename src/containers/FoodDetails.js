@@ -14,9 +14,6 @@ const FoodDetails = () => {
   const { mealId } = useParams();
   const dispatch = useDispatch();
   const mealDetails = useSelector((state) => state.details.meals[0]);
-  const {
-    idMeal, strMeal, strCategory, strInstructions, strMealThumb,
-  } = mealDetails;
   console.log('state', mealId);
   const featchMealDetails = async () => {
     const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
@@ -29,19 +26,19 @@ const FoodDetails = () => {
 
   const classes = useStyles();
   return (
-    <Card className={classes.details} key={idMeal}>
+    <Card className={classes.details} key={mealDetails.idMeal}>
       <CardActionArea>
         <CardMedia
           className={classes.detailmedia}
-          image={strMealThumb}
-          title={strMeal}
+          image={mealDetails.strMealThumb}
+          title={mealDetails.strMeal}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {strCategory}
+            {mealDetails.strCategory}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {strInstructions}
+            {mealDetails.strInstructions}
           </Typography>
         </CardContent>
       </CardActionArea>

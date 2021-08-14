@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => (
   <div>
-    <p>lorem</p>
+    <p>You can learn different food recipes via this website </p>
   </div>
 );
 
