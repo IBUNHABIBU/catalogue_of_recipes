@@ -12,9 +12,9 @@ const App = () => (
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/category/:categoryName" component={CategoryListing} />
-        <Route path="/about" component={About} />
-        <Route path="/category/:categoryName/:mealId" component={FoodDetails} />
+        <Route path="/category/:categoryName" exact component={CategoryListing} />
+        <Route path="/about" exact component={About} />
+        <Route path="/category/:categoryName/:mealId" exact component={FoodDetails} />
       </Switch>
     </Router>
   </div>

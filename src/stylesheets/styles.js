@@ -10,11 +10,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '56.25%', // 16:9
   },
   details: {
-    maxWidth: 345,
+    maxWidth: '100%',
   },
   detailmedia: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
   },
   expand: {
     transform: 'rotate(0deg)',

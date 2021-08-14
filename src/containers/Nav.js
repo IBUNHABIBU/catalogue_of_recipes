@@ -1,8 +1,7 @@
 import React from 'react';
 import {
-  AppBar, Toolbar, Typography, IconButton,
+  AppBar, Toolbar, Typography,
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import CategoryFilter from '../components/CategoryFilter';
@@ -22,9 +21,6 @@ const Nav = () => {
     <div className={classes.navbar}>
       <AppBar position="static" color="transparent" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.logo} variant="h6" noWrap>
             RECIPE ZONE
           </Typography>

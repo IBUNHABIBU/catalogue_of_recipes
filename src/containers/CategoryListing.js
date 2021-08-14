@@ -61,7 +61,11 @@ const CategoryListing = () => {
   );
   return (
     <div>
-      <h1>these are food recipe that are in the same category</h1>
+      <h1>
+        {
+          `${categoryName}  category`
+        }
+      </h1>
       { displayByCategory }
     </div>
   );
