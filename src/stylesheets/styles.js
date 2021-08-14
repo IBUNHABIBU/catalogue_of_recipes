@@ -5,6 +5,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
