@@ -13,10 +13,10 @@ import { selectedMeal } from '../redux/actions';
 const FoodDetails = () => {
   const { mealId } = useParams();
   const dispatch = useDispatch();
-  const mealDetails = useSelector((state) => state.details);
-  console.log(mealDetails);
+  const mealDetails = useSelector((state) => state.details.meals);
+  console.log('state', mealDetails);
   const featchMealDetails = async () => {
-    const response = axios.get(`themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
+    const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
     dispatch(selectedMeal(response.data));
   };
 
@@ -43,7 +43,7 @@ const FoodDetails = () => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      
+
     </Card>
   );
 };
