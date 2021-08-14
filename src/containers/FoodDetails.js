@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -13,8 +14,9 @@ import { selectedMeal } from '../redux/actions';
 const FoodDetails = () => {
   const { mealId } = useParams();
   const dispatch = useDispatch();
-  const mealDetails = useSelector((state) => state.details.meals);
-  console.log('state', mealDetails);
+  const mealDetails = useSelector((state) => state.details.meals[0]);
+  const { idMeal, strMeal, strCategory, strArea, strInstructions, strMealthumb } = mealDetails;
+  console.log('state', strArea);
   const featchMealDetails = async () => {
     const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
     dispatch(selectedMeal(response.data));
