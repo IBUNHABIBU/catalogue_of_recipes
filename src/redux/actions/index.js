@@ -14,3 +14,8 @@ export const changeFilter = (filter) => ({
   type: actionTypes.CHANGE_FILTER,
   payload: filter,
 });
+
+export const selectedMeal = (meal) => ({
+  type: actionTypes.SELECTED_MEAL,
+  payload: meal,
+})
