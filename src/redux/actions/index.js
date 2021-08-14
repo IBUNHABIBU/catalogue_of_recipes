@@ -18,4 +18,4 @@ export const changeFilter = (filter) => ({
 export const selectedMeal = (meal) => ({
   type: actionTypes.SELECTED_MEAL,
   payload: meal,
-})
+});
