@@ -13,7 +13,7 @@ import { selectedMeal } from '../redux/actions';
 const FoodDetails = () => {
   const { mealId } = useParams();
   const dispatch = useDispatch();
-  const mealDetails = useSelector((state) => state.details.meals[0]);
+  const details = useSelector((state) => state.details.meals[0]);
   console.log('state', mealId);
   const featchMealDetails = async () => {
     const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
@@ -30,15 +30,15 @@ const FoodDetails = () => {
       <CardActionArea>
         <CardMedia
           className={classes.detailmedia}
-          image={mealDetails.strMealThumb}
-          title={mealDetails.strMeal}
+          image={details.strMealThumb}
+          title={details.strMeal}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {mealDetails.strCategory}
+            {details.strCategory}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {mealDetails.strInstructions}
+            {details.strInstructions}
           </Typography>
         </CardContent>
       </CardActionArea>
