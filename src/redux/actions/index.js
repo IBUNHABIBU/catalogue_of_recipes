@@ -6,7 +6,7 @@ export const setRecipe = (meals) => ({
 });
 
 export const selectRecipe = (meal) => ({
-  type: actionTypes.SELECTED_RECIPE,
+  type: actionTypes.SELECTED_CATEGORY,
   payload: meal,
 });
 
