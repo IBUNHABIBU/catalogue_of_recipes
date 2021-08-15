@@ -58,7 +58,7 @@ const FoodDetails = () => {
                 Category:
                 {strCategory}
               </Typography>
-              <Typography gutterBottom variant="h6" component="h2">
+              <Typography gutterBottom variant="Body2" component="h2">
                 Area:
                 {strArea}
               </Typography>
