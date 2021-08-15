@@ -15,7 +15,6 @@ const FoodDetails = () => {
   const { mealId } = useParams();
   const dispatch = useDispatch();
   const details = useSelector((state) => state.details.meals);
-  console.log('details', details);
   const featchMealDetails = async () => {
     const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
     dispatch(selectedMeal(response.data));
@@ -23,12 +22,14 @@ const FoodDetails = () => {
 
   const classes = useStyles();
   useEffect(() => {
-    console.log('fetch');
     featchMealDetails();
-  }, []);
+  }, [mealId]);
   if (details.length === 0) {
-    console.log('length', details.length);
-    return <span>Loading ..</span>;
+    return (
+      <CircularProgress>
+        <span>Loading ..</span>
+      </CircularProgress>
+    );
   }
   const {
     strMealThumb, strMeal,
