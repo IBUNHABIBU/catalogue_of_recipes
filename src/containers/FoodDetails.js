@@ -26,9 +26,10 @@ const FoodDetails = () => {
   }, [mealId]);
   if (details.length === 0) {
     return (
-      <CircularProgress>
+      <div>
         <span>Loading ..</span>
-      </CircularProgress>
+        <CircularProgress />
+      </div>
     );
   }
   const {
