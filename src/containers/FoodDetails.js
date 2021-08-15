@@ -27,7 +27,7 @@ const FoodDetails = () => {
   if (details.length === 0) {
     return (
       <div>
-        <span>Loading ..</span>
+        <Typography variant="h4">Loading ..  </Typography>
         <CircularProgress />
       </div>
     );
