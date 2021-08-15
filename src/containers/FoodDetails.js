@@ -32,7 +32,7 @@ const FoodDetails = () => {
     );
   }
   const {
-    strMealThumb, strMeal,
+    strMealThumb, strMeal, strArea,
     strCategory, strInstructions,
   } = details[0];
 
@@ -51,8 +51,16 @@ const FoodDetails = () => {
               title={strMeal}
             />
             <CardContent>
+              <Typography gutterBottom variant="h3" component="h2">
+                {strMeal}
+              </Typography>
               <Typography gutterBottom variant="h5" component="h2">
+                Category:
                 {strCategory}
+              </Typography>
+              <Typography gutterBottom variant="h6" component="h2">
+                Area:
+                {strArea}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 {strInstructions}
