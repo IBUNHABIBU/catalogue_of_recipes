@@ -9,11 +9,11 @@ import useStyles from '../stylesheets/styles';
 import { changeFilter } from '../redux/actions/index';
 
 const Nav = () => {
-  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
   };
+  const filter = useSelector((state) => state.filter);
   const classes = useStyles();
   return (
 
