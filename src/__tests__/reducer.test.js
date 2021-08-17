@@ -50,8 +50,57 @@ describe('mealCategoryReducer', () => {
     };
 
     const newState = mealCategoryReducer(undefined, {});
-    expect(newSate).toEqual({
+    expect(newState).toEqual({
       meals: [],
     });
+  });
+
+  it('should return new state when apply action', () => {
+    const data = {
+      meals: [
+        {
+          id: 1,
+          name: 'Januari',
+          description: 'Lorem ipsum',
+        }
+      ]
+    }
+    const newState = mealCategoryReducer(undefined, {
+      type: actionTypes.SELECTED_CATEGORY,
+      payload: data,
+    })
+    
+    expect(newState).toEqual(data);
+  })
+});
+
+describe('mealDetails', () => {
+  it('It should return default state when no action', () => {
+    const defaultState = {
+      meals: [],
+    };
+
+    const newState = mealCategoryReducer(undefined, {});
+    expect(newState).toEqual({
+      meals: [],
+    });
+  });
+
+  it('should return new state when apply action', () => {
+    const data = {
+      meals: [
+        {
+          id: 1,
+          name: 'Januari',
+          description: 'Lorem ipsum',
+        }
+      ]
+    }
+    const newState = mealCategoryReducer(undefined, {
+      type: actionTypes.SELECTED_MEAL,
+      payload: {...state , ...data },
+    })
+    
+    expect(newState).toEqual(data);
   })
 })

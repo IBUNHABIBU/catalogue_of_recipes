@@ -1,26 +1,26 @@
-// import { render, unmountComponentAtNode } from "react-dom";
-// import { act } from "react-dom/test-utils";
-// import About from './../containers/About';
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+import About from './../containers/About';
 
-// let container = null;
+let container = null;
 
-// beforeEach(() => {
-//   container = document.createElement("div");
-//   document.body.appendChild(container);
-// });
+beforeEach(() => {
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
 
-// afterEach(() => {
-//   unmountComponentAtNode(container);
-//   container.remove();
-//   container = null;
-// });
+afterEach(() => {
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
 
-// describe('<About />', () => {
-//   it('should display the text', () => {
-//     act(()=> {
-//       render(<About />, container);
-//     });
+describe('<About />', () => {
+  it('should display the text', () => {
+    act(()=> {
+      render(<About />, container);
+    });
 
-//     expect(container.textContent).toBe('Learn different food recipes via this website')
-//   })
-// })
+    expect(container.textContent).toBe('Learn different food recipes via this website')
+  })
+})
