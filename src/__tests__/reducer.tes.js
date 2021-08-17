@@ -4,6 +4,9 @@ import { actionTypes } from '../redux/costants';
 describe('allMealCategoryReducer', () => {
   it('Should return default state when there is no action', () => {
     const newState = allMealCategoryReducer(undefined, {});
-    console.log(newState);
+    const defaultState = {
+     categories: [],
+   };
+    expect(newState).toEqual(defaultState);
   })
 })
