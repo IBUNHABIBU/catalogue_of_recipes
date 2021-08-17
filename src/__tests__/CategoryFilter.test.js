@@ -1,5 +1,5 @@
 import React from 'react';
-import { checkPropTypes } from 'check-prop-types';
+import checkProps from './utility/index';
 
 describe('Checking Proptypes', () => {
   it('It should not throw a warning', () => {
