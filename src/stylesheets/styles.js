@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
-  container: {
+  salu: {
     paddingTop: '12rem',
   },
   media: {
