@@ -22,6 +22,7 @@ describe('allMealCategoryReducer', () => {
     const newState = allMealCategoryReducer(undefined, {
      type: actionTypes.SET_RECIPE,
     payload: data });
-    expect(newState).toBe(data);
+    expect(newState).toEqual(data);
   });
+ 
 })
