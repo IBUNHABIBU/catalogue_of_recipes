@@ -3,7 +3,7 @@ import { actionTypes } from '../redux/costants';
 
 describe('allCategoryReducer', () => {
   it('Should return default state when there is no action', () => {
-    const newState = allMealCategoryReducer(undefined, {});
+    const newState = allCategoryReducer(undefined, {});
     const defaultState = {
      categories: [],
    };
@@ -18,7 +18,7 @@ describe('allCategoryReducer', () => {
       description: 'Lorem ipsum',
      }]
     }
-    const newState = allMealCategoryReducer(undefined, {
+    const newState = allCategoryReducer(undefined, {
      type: actionTypes.SET_RECIPE,
     payload: data });
     expect(newState).toEqual(data);
