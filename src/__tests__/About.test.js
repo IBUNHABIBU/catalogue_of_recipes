@@ -1,11 +1,11 @@
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-import About from './../containers/About';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
+import About from '../containers/About';
 
 let container = null;
 
 beforeEach(() => {
-  container = document.createElement("div");
+  container = document.createElement('div');
   document.body.appendChild(container);
 });
 
@@ -17,9 +17,9 @@ afterEach(() => {
 
 describe('<About />', () => {
   it('should display the text', () => {
-    act(()=> {
+    act(() => {
       render(<About />, container);
     });
     // expect(container.textContent).toBe('Learn different food recipes via this website')
-  })
-})
+  });
+});

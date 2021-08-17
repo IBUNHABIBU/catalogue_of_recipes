@@ -8,6 +8,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { selectRecipe } from '../redux/actions';
 import useStyles from '../stylesheets/styles';
 
@@ -28,34 +29,40 @@ const CategoryListing = () => {
   const displayByCategory = (
     <Grid container spacing={3}>
       {
-        foodList.map((list) => {
-          const {
-            strMeal, strMealThumb, idMeal,
-          } = list;
-          return (
-            <Grid item lg={3} key={idMeal}>
-              <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
-                <Paper spacing={3}>
-                  <Card className={classes.root}>
-                    <CardHeader
-                      title={strMeal}
-                    />
-                    <CardMedia
-                      className={classes.media}
-                      image={strMealThumb}
-                      title="Paella dish"
-                    />
-                    <CardContent>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {strMeal.substring(0, 200)}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Paper>
-              </Link>
-            </Grid>
-          );
-        })
+        !foodList.length ? (
+          <div align="center">
+            <Typography variant="h4">Loading ..  </Typography>
+            <CircularProgress />
+          </div>
+        )
+          : (foodList.map((list) => {
+            const {
+              strMeal, strMealThumb, idMeal,
+            } = list;
+            return (
+              <Grid item lg={3} key={idMeal}>
+                <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
+                  <Paper spacing={3}>
+                    <Card className={classes.root}>
+                      <CardHeader
+                        title={strMeal}
+                      />
+                      <CardMedia
+                        className={classes.media}
+                        image={strMealThumb}
+                        title="Paella dish"
+                      />
+                      <CardContent>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                          {strMeal.substring(0, 200)}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Paper>
+                </Link>
+              </Grid>
+            );
+          }))
       }
     </Grid>
   );
