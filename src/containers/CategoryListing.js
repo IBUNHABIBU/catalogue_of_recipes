@@ -26,49 +26,51 @@ const CategoryListing = () => {
     fetchByCategory();
   }, [categoryName]);
 
+  if (foodList.length === 0) {
+    return (
+      <div align="center">
+        <Typography variant="h4">Loading ..  </Typography>
+        <CircularProgress />
+      </div>
+    );
+  }
   const displayByCategory = (
     <Grid container spacing={3}>
       {
-        !foodList.length ? (
-          <div align="center">
-            <Typography variant="h4">Loading ..  </Typography>
-            <CircularProgress />
-          </div>
-        )
-          : (foodList.map((list) => {
-            const {
-              strMeal, strMealThumb, idMeal,
-            } = list;
-            return (
-              <Grid item lg={3} key={idMeal}>
-                <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
-                  <Paper spacing={3}>
-                    <Card className={classes.root}>
-                      <CardHeader
-                        title={strMeal}
-                      />
-                      <CardMedia
-                        className={classes.media}
-                        image={strMealThumb}
-                        title="Paella dish"
-                      />
-                      <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                          {strMeal.substring(0, 200)}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Paper>
-                </Link>
-              </Grid>
-            );
-          }))
+            foodList.map((list) => {
+              const {
+                strMeal, strMealThumb, idMeal,
+              } = list;
+              return (
+                <Grid item lg={3} key={idMeal}>
+                  <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
+                    <Paper spacing={3}>
+                      <Card className={classes.root}>
+                        <CardHeader
+                          title={strMeal}
+                        />
+                        <CardMedia
+                          className={classes.media}
+                          image={strMealThumb}
+                          title="Paella dish"
+                        />
+                        <CardContent>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                            {strMeal.substring(0, 200)}
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    </Paper>
+                  </Link>
+                </Grid>
+              );
+            })
       }
     </Grid>
   );
   return (
     <div>
-      <h1>
+      <h1 align="center">
         {
           `${categoryName}  category`
         }

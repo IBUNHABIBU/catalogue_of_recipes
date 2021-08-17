@@ -40,35 +40,30 @@ const FoodDetails = () => {
   return (
     <Card className={classes.details}>
       {
-        !details.length ? (
-          <div>
-            <CircularProgress />
-          </div>
-        ) : (
-          <CardActionArea>
-            <CardMedia
-              className={classes.detailmedia}
-              image={strMealThumb}
-              title={strMeal}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h3" component="h2">
-                {strMeal}
-              </Typography>
-              <Typography gutterBottom variant="h5" component="h2">
-                Category:
-                {strCategory}
-              </Typography>
-              <Typography gutterBottom variant="Body2" component="h2">
-                Area:
-                {strArea}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {strInstructions}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        )
+        <CardActionArea>
+          <CardMedia
+            className={classes.detailmedia}
+            image={strMealThumb}
+            title={strMeal}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h3" component="h2">
+              {strMeal}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="h2">
+              Category:
+              {strCategory}
+            </Typography>
+            <Typography gutterBottom variant="Body2" component="h2">
+              Area:
+              {strArea}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {strInstructions}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        // )
       }
     </Card>
   );

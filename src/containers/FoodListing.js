@@ -13,43 +13,46 @@ import useStyles from '../stylesheets/styles';
 const FoodListing = () => {
   const classes = useStyles();
   const meals = useSelector((state) => state.allFoods.categories);
+  if (meals.length === 0) {
+    return (
+      <div align="center">
+        <Typography variant="h4">Loading ..  </Typography>
+        <CircularProgress />
+      </div>
+    );
+  }
   const renderList = (
     <Grid container spacing={1}>
       {
-  !meals.length ? (
-    <div align="center">
-      <Typography variant="h4">Loading ....</Typography>
-      <CircularProgress />
-    </div>
-  )
-    : (meals.map((meal) => {
-      const {
-        idCategory, strCategory, strCategoryThumb, strCategoryDescription,
-      } = meal;
-      return (
-        <Grid item lg={3} key={idCategory}>
-          <Link to={`/category/${strCategory}`} className={classes.link}>
-            <Paper spacing={3}>
-              <Card className={classes.root}>
-                <CardHeader
-                  title={strCategory}
-                />
-                <CardMedia
-                  className={classes.media}
-                  image={strCategoryThumb}
-                  title="Paella dish"
-                />
-                <CardContent>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {strCategoryDescription.substring(0, 200)}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Paper>
-          </Link>
-        </Grid>
-      );
-    }))
+
+      meals.map((meal) => {
+        const {
+          idCategory, strCategory, strCategoryThumb, strCategoryDescription,
+        } = meal;
+        return (
+          <Grid item lg={3} key={idCategory}>
+            <Link to={`/category/${strCategory}`} className={classes.link}>
+              <Paper spacing={3}>
+                <Card className={classes.root}>
+                  <CardHeader
+                    title={strCategory}
+                  />
+                  <CardMedia
+                    className={classes.media}
+                    image={strCategoryThumb}
+                    title="Paella dish"
+                  />
+                  <CardContent>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      {strCategoryDescription.substring(0, 200)}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Paper>
+            </Link>
+          </Grid>
+        );
+      })
       }
     </Grid>
   );
