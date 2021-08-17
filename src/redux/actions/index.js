@@ -1,7 +1,7 @@
 import { actionTypes } from '../costants';
 
-export const setRecipe = (meals) => ({
-  type: actionTypes.SET_RECIPE,
+export const setCategories = (meals) => ({
+  type: actionTypes.SET_CATEGORIES,
   payload: meals,
 });
 

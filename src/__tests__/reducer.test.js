@@ -1,7 +1,7 @@
-import allMealCategoryReducer from '../redux/reducers/allMealCategoryReducer';
+import allCategoryReducer from '../redux/reducers/allCategoryReducer';
 import { actionTypes } from '../redux/costants';
 
-describe('allMealCategoryReducer', () => {
+describe('allCategoryReducer', () => {
   it('Should return default state when there is no action', () => {
     const newState = allMealCategoryReducer(undefined, {});
     const defaultState = {
