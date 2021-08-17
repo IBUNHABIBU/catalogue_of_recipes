@@ -16,7 +16,7 @@ describe('allMealCategoryReducer', () => {
      categories: [{
       id: 2,
       name: 'Juma',
-      description: 'Lorem ipsum'm
+      description: 'Lorem ipsum',
      }]
     }
     const newState = allMealCategoryReducer(undefined, {
