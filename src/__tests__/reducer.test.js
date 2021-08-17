@@ -20,8 +20,8 @@ describe('allMealCategoryReducer', () => {
      }]
     }
     const newState = allMealCategoryReducer(undefined, {
-     type: actionTypes.SELECTED_CATEGORY,
-    payload: data })
+     type: actionTypes.SET_RECIPE,
+    payload: data });
+    expect(newState).toBe(data);
   });
-   expect(newState).toBe(data);
 })
