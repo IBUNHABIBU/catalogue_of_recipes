@@ -1,4 +1,5 @@
 import { actionTypes } from '../costants';
+import axios from 'axios';
 
 export const setCategories = (meals) => ({
   type: actionTypes.SET_CATEGORIES,
@@ -15,7 +16,31 @@ export const changeFilter = (filter) => ({
   payload: filter,
 });
 
-export const selectedMeal = (meal) => ({
-  type: actionTypes.SELECTED_MEAL,
-  payload: meal,
-});
+export const fetchMealRequest = () => {
+  return {
+    type: actionTypes.FETCH_MEAL_REQUEST,
+  }
+};
+
+export const fetchMealSuccess = (meal) => {
+  return {
+    type: actionTypes.FETCH_MEAL_SUCCESS,
+    paylod: meal,
+  }
+};
+
+export const fetchMealFailure = (error) => {
+  return {
+    type: actionTypes.FETCH_MEAL_FAILURE,
+    paylod: error,
+  }
+};
+
+const fetchMeal = () => {
+  return function(dispatch) {
+    axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
+    .then(response => {
+      
+    })
+  }
+}
