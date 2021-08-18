@@ -2,9 +2,11 @@ import checkPropTypes from 'check-prop-types';
 import { createStore } from 'redux';
 import reducers from './../redux/reducers';
 
-const checkProps = (component, expectedProps) => {
+export const checkProps = (component, expectedProps) => {
   const propsError = checkPropTypes(component.propTypes, expectedProps, 'props', component.name);
   return propsError;
 };
 
-export default checkProps;
+export const testStore = (initialState) => {
+  return createStore(reducers, initialState)
+}
