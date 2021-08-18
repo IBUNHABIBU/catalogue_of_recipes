@@ -4,6 +4,7 @@ export const actionTypes = {
   FETCH_MEAL_SUCCESS: 'FETCH_MEAL_SUCCESS',
   FETCH_MEAL_FAILURE: 'FETCH_MEAL_FAILURE',
   SELECTED_CATEGORY: 'SELECTED_CATEGORY',
+  SET_CATEGORIES: 'SET_CATEGORIES',
   CHANGE_FILTER: 'CHANGE_FILTER',
   SELECTED_MEAL: 'SELECTED_MEAL',
   bookCategories: ['Beef', 'Chicken', 'Dessert', 'Lamb', 'Seafood', 'Breakfast', 'Vegetarian', 'Starter'],

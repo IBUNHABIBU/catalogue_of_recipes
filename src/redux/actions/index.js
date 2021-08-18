@@ -1,5 +1,5 @@
-import { actionTypes } from '../costants';
 import axios from 'axios';
+import { actionTypes } from '../costants';
 
 export const setCategories = (meals) => ({
   type: actionTypes.SET_CATEGORIES,
@@ -16,31 +16,26 @@ export const changeFilter = (filter) => ({
   payload: filter,
 });
 
-export const fetchMealRequest = () => {
-  return {
-    type: actionTypes.FETCH_MEAL_REQUEST,
-  }
-};
+export const fetchMealRequest = () => ({
+  type: actionTypes.FETCH_MEAL_REQUEST,
+});
 
-export const fetchMealSuccess = (meal) => {
-  return {
-    type: actionTypes.FETCH_MEAL_SUCCESS,
-    paylod: meal,
-  }
-};
+export const fetchMealSuccess = (meal) => ({
+  type: actionTypes.FETCH_MEAL_SUCCESS,
+  paylod: meal,
+});
 
-export const fetchMealFailure = (error) => {
-  return {
-    type: actionTypes.FETCH_MEAL_FAILURE,
-    paylod: error,
-  }
-};
+export const fetchMealFailure = (error) => ({
+  type: actionTypes.FETCH_MEAL_FAILURE,
+  paylod: error,
+});
 
-const fetchMeal = () => {
-  return function(dispatch) {
-    axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
-    .then(response => {
-      
-    })
-  }
-}
+export const fetchMeal = () => (dispatch) => {
+  dispatch(fetchMealRequest());
+  axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
+    .then((response) => {
+      dispatch(fetchMealSuccess(response.data));
+    }).catch((error) => {
+      dispatch(fetchMealFailure(error.message));
+    });
+};

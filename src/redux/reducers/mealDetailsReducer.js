@@ -12,17 +12,17 @@ const mealDetailsReducer = (state = initialState, { type, payload }) => {
         ...state, loading: true,
       };
     case actionTypes.FETCH_MEAL_SUCCESS:
-        return {
-          loading: true,
-          meals: payload,
-          error: ''
-        };
+      return {
+        loading: true,
+        meals: payload,
+        error: '',
+      };
     case actionTypes.FETCH_MEAL_FAILURE:
-          return {
-            loading: false,
-            meals: [],
-            error: payload
-          };
+      return {
+        loading: false,
+        meals: [],
+        error: payload,
+      };
     default:
       return state;
   }
