@@ -42,13 +42,16 @@ const CategoryListing = () => {
                 <Grid item lg={3} key={idMeal}>
                   <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
                     <Paper spacing={3}>
-                    <div className="card" style="width: 18rem;">
-  <img src={strMealThumb} className="card-img-top" alt="Thumb" />
-  <div className="card-body">
-    <h3 className="card-text"> {strMeal}</h3>
-  </div>
-</div>
-                   
+                      <div className="card" style="width: 18rem;">
+                        <img src={strMealThumb} className="card-img-top" alt="Thumb" />
+                        <div className="card-body">
+                          <h3 className="card-text">
+                            {' '}
+                            {strMeal}
+                          </h3>
+                        </div>
+                      </div>
+
                     </Paper>
                   </Link>
                 </Grid>
