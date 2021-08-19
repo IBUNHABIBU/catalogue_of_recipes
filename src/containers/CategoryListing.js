@@ -32,7 +32,7 @@ const CategoryListing = () => {
                   strMeal, strMealThumb, idMeal,
                 } = list;
                 return (
-                  <div className="col-3 p-1" key={idMeal}>
+                  <div className=" col-12 col-lg-3 col-md-6 p-1" key={idMeal}>
                     <Link to={`/category/${categoryName}/${idMeal}`} className="link">
                       <div className="card ">
                         <img src={strMealThumb} className="card-img-top" alt="Thumb" />

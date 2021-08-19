@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CategoryFilter from '../components/CategoryFilter';
 // import { useDispatch, useSelector } from 'react-redux';
 // import CategoryFilter from '../components/CategoryFilter';
 // import useStyles from '../stylesheets/styles';
@@ -23,16 +24,12 @@ const Nav = () => (
               <Link to="/about" className="link"><span className="nav-link active" aria-current="page">About</span></Link>
             </li>
             <li className="nav-item dropdown">
-              <Link to="/" className="link">
+              <Link to="/filter" className="link">
                 <span className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Category
                 </span>
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Action</span></Link></li>
-                <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Another action</span></Link></li>
-                <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Something else here</span></Link></li>
-              </ul>
+              <CategoryFilter />
             </li>
           </ul>
         </div>
