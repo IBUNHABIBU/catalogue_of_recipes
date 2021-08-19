@@ -1,47 +1,41 @@
 import React from 'react';
-import {
-  AppBar, Toolbar, Typography,
-} from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import CategoryFilter from '../components/CategoryFilter';
-import useStyles from '../stylesheets/styles';
-import { changeFilter } from '../redux/actions/index';
+// import { useDispatch, useSelector } from 'react-redux';
+// import CategoryFilter from '../components/CategoryFilter';
+// import useStyles from '../stylesheets/styles';
+// import { changeFilter } from '../redux/actions/index';
 
-const Nav = () => {
-  const dispatch = useDispatch();
-  const handleCategoryChange = (e) => {
-    dispatch(changeFilter(e.target.value));
-  };
-  const filter = useSelector((state) => state.filter);
-  const classes = useStyles();
-  return (
+const Nav = () => (
+  <div classNameName="navbar">
 
-    <div className={classes.navbar}>
-      <AppBar position="static" color="transparent" className={classes.appbar}>
-        <Toolbar className={classes.toolbar}>
-          <Typography className={classes.logo} variant="h6" noWrap>
-            RECIPE ZONE
-          </Typography>
-          <Link to="/" className={classes.link}>
-            <Typography variant="h5">
-              Home
-            </Typography>
-          </Link>
-          <Link to="/about" className={classes.link}>
-            <Typography edge="start" variant="h5">
-              About
-            </Typography>
-          </Link>
-          {
-          }
-          <Link to={`/category/${filter}`} className={classes.link}>
-            <CategoryFilter handleFilter={handleCategoryChange} className={classes.catField} />
-          </Link>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-};
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link to="/" className="link"><span className="navbar-brand">Recipes Zone</span></Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/" className="link"><span className="nav-link active" aria-current="page">Home</span></Link>
+            </li>
 
+            <li className="nav-item dropdown">
+              <Link to="/" className="link">
+                <span className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </span>
+              </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Action</span></Link></li>
+                <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Another action</span></Link></li>
+                <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Something else here</span></Link></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+);
 export default Nav;
