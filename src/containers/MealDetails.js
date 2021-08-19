@@ -27,7 +27,7 @@ const MealDetails = () => {
   }
   const {
     strMealThumb, strMeal, strInstructions,
-    strCategory,
+    strCategory, strArea,
   } = details[0];
 
   return (
@@ -44,8 +44,14 @@ const MealDetails = () => {
               <p className="card-text">{strInstructions}</p>
               <h5 className="card-text">
                 <small className="text-muted">
-                  <strong>category:</strong>
+                  <strong>Category:  </strong>
                   {strCategory}
+                </small>
+              </h5>
+              <h5 className="card-text">
+                <small className="text-muted">
+                  <strong>Area:  </strong>
+                  {strArea}
                 </small>
               </h5>
             </div>
