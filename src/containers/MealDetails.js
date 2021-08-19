@@ -31,14 +31,25 @@ const MealDetails = () => {
   } = details[0];
 
   return (
-    <div className="page-width">
+    <div className="container p-4">
 
-      <div className="card bg-dark text-white">
-        <img src={strMealThumb} className="card-img" alt="image thumb" />
-        <div className="card-img-overlay">
-          <h5 className="card-title">{strMeal}</h5>
-          <p className="card-text">{strInstructions}</p>
-          <p className="card-text">{strCategory}</p>
+      <div className="card mb-3">
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img src={strMealThumb} className="img-fluid rounded-start" alt="str meal thumb" />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">{strMeal}</h5>
+              <p className="card-text">{strInstructions}</p>
+              <h5 className="card-text">
+                <small className="text-muted">
+                  <strong>category:</strong>
+                  {strCategory}
+                </small>
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>
