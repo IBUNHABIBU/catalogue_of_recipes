@@ -19,7 +19,9 @@ const Nav = () => (
             <li className="nav-item">
               <Link to="/" className="link"><span className="nav-link active" aria-current="page">Home</span></Link>
             </li>
-
+            <li className="nav-item">
+              <Link to="/about" className="link"><span className="nav-link active" aria-current="page">About</span></Link>
+            </li>
             <li className="nav-item dropdown">
               <Link to="/" className="link">
                 <span className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
