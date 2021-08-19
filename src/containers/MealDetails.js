@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { selectMeal } from '../redux/actions';
+import Loading from './Loading';
 
 const MealDetails = () => {
   const { mealId } = useParams();
@@ -18,11 +19,7 @@ const MealDetails = () => {
   }, [mealId]);
   if (details.length === 0) {
     return (
-      <div className="d-flex justify-content-center">
-        <h2>Loading...</h2>
-        <br />
-        <div className="spinner-border text-primary" role="status" />
-      </div>
+      <Loading />
     );
   }
   const {
