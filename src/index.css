@@ -25,3 +25,8 @@ code {
     'Courier New',
     monospace;
 }
+
+.page-width {
+  width: 600px;
+  height: 600px;
+}
