@@ -5,8 +5,8 @@ export const setCategories = (meals) => ({
   payload: meals,
 });
 
-export const selectRecipe = (meal) => ({
-  type: actionTypes.SELECTED_CATEGORY,
+export const selectCategory = (meal) => ({
+  type: actionTypes.SELECT_CATEGORY,
   payload: meal,
 });
 
@@ -15,7 +15,7 @@ export const changeFilter = (filter) => ({
   payload: filter,
 });
 
-export const selectedMeal = (meal) => ({
-  type: actionTypes.SELECTED_MEAL,
+export const selectMeal = (meal) => ({
+  type: actionTypes.SELECT_MEAL,
   payload: meal,
 });
