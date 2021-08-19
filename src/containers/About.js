@@ -5,7 +5,7 @@ import useStyles from '../stylesheets/styles';
 const About = () => {
   const classes = useStyles();
   return (
-    <Container maxWidth="sm" className={classes.salu}>
+    <Container maxWidth="sm" className={classes.about}>
       <Typography variant="h5" component="h2">
         Learn different food recipes via this website
       </Typography>

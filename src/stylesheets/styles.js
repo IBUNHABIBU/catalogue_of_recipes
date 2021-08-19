@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
-  salu: {
+  about: {
     paddingTop: '12rem',
   },
   media: {
@@ -57,8 +57,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
   },
   logo: {
-    color: '#000000',
+    color: '#3e2524',
   },
 }));
-
 export default useStyles;
