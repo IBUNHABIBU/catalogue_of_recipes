@@ -5,7 +5,7 @@ const initialState = {
 };
 const mealDetailsReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.SELECTED_MEAL:
+    case actionTypes.SELECT_MEAL:
       return {
         ...state, ...payload,
       };

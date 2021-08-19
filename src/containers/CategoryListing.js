@@ -9,7 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { selectRecipe } from '../redux/actions';
+import { selectCategory } from '../redux/actions';
 import useStyles from '../stylesheets/styles';
 
 const CategoryListing = () => {
@@ -19,7 +19,7 @@ const CategoryListing = () => {
   const classes = useStyles();
   const fetchByCategory = async () => {
     const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
-    dispatch(selectRecipe(response.data));
+    dispatch(selectCategory(response.data));
   };
 
   useEffect(() => {

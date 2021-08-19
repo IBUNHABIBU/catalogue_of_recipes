@@ -4,7 +4,7 @@ import Nav from './containers/Nav';
 import Home from './containers/Home';
 import CategoryListing from './containers/CategoryListing';
 import About from './containers/About';
-import FoodDetails from './containers/FoodDetails';
+import MealDetails from './containers/MealDetails';
 
 const App = () => (
   <div>

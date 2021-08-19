@@ -5,7 +5,7 @@ const initialState = {
 };
 const mealCategoryReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.SELECTED_CATEGORY:
+    case actionTypes.SELECT_CATEGORY:
       return {
         ...state, ...payload,
       };
