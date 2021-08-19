@@ -1,33 +1,28 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-// import axios from 'axios';
+import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { bindActionCreators } from 'redux';
 import useStyles from '../stylesheets/styles';
-import { fetchMeal } from '../redux/actions';
-// import { actionCreators } from '../utility';
+import { selectedMeal } from '../redux/actions';
 
 const FoodDetails = () => {
-  const dispatch = useDispatch();
-  const act = bindActionCreators(fetchMeal, dispatch);
-  console.log(act);
   const { mealId } = useParams();
+  const dispatch = useDispatch();
   const details = useSelector((state) => state.details.meals);
-  // const featchMealDetails = async () => {
-  //   const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
-  //   dispatch(selectedMeal(response.data));
-  // };
+  const featchMealDetails = async () => {
+    const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
+    dispatch(selectedMeal(response.data));
+  };
 
   const classes = useStyles();
   useEffect(() => {
-    // featchMeal();
-    console.log('action creators', act);
+    featchMealDetails();
   }, [mealId]);
   if (details.length === 0) {
     return (

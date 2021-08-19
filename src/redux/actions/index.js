@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { actionTypes } from '../costants';
 
 export const setCategories = (meals) => ({
@@ -6,7 +5,7 @@ export const setCategories = (meals) => ({
   payload: meals,
 });
 
-export const selectCategory = (meal) => ({
+export const selectRecipe = (meal) => ({
   type: actionTypes.SELECTED_CATEGORY,
   payload: meal,
 });
@@ -16,26 +15,7 @@ export const changeFilter = (filter) => ({
   payload: filter,
 });
 
-export const fetchMealRequest = () => ({
-  type: actionTypes.FETCH_MEAL_REQUEST,
+export const selectedMeal = (meal) => ({
+  type: actionTypes.SELECTED_MEAL,
+  payload: meal,
 });
-
-export const fetchMealSuccess = (meal) => ({
-  type: actionTypes.FETCH_MEAL_SUCCESS,
-  paylod: meal,
-});
-
-export const fetchMealFailure = (error) => ({
-  type: actionTypes.FETCH_MEAL_FAILURE,
-  paylod: error,
-});
-
-export const fetchMeal = () => (dispatch) => {
-  dispatch(fetchMealRequest());
-  axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
-    .then((response) => {
-      dispatch(fetchMealSuccess(response.data));
-    }).catch((error) => {
-      dispatch(fetchMealFailure(error.message));
-    });
-};
