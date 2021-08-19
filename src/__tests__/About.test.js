@@ -1,25 +1,15 @@
-import { render, unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from 'enzyme';
+
 import About from '../containers/About';
 
-let container = null;
-
-beforeEach(() => {
-  container = document.createElement('div');
-  document.body.appendChild(container);
-});
+let wrapper;
 
 afterEach(() => {
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
+  wrapper = render(<About />);
 });
 
 describe('<About />', () => {
   it('should display the text', () => {
-    act(() => {
-      render(<About />, container);
-    });
-    // expect(container.textContent).toBe('Learn different food recipes via this website')
+    expect(wrapper).toContain('This');
   });
 });
