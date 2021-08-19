@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
-import Typography from '@material-ui/core/Typography';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { selectCategory } from '../redux/actions';
+import Loading from './Loading';
 
 const CategoryListing = () => {
   const { categoryName } = useParams();
@@ -21,10 +20,7 @@ const CategoryListing = () => {
 
   if (foodList.length === 0) {
     return (
-      <div align="center">
-        <Typography variant="h4">Loading ..  </Typography>
-        <CircularProgress />
-      </div>
+      <Loading />
     );
   }
   const displayByCategory = (

@@ -1,17 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import Loading from './Loading';
 
 const FoodListing = () => {
   const meals = useSelector((state) => state.allFoods.categories);
   if (meals.length === 0) {
     return (
-      <div align="center">
-        <Typography variant="h4">Loading ..  </Typography>
-        <CircularProgress />
-      </div>
+      <Loading />
     );
   }
   const renderList = (
