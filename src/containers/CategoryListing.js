@@ -4,9 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { Grid, Paper } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { selectCategory } from '../redux/actions';
@@ -45,21 +42,13 @@ const CategoryListing = () => {
                 <Grid item lg={3} key={idMeal}>
                   <Link to={`/category/${categoryName}/${idMeal}`} className={classes.link}>
                     <Paper spacing={3}>
-                      <Card className={classes.root}>
-                        <CardHeader
-                          title={strMeal}
-                        />
-                        <CardMedia
-                          className={classes.media}
-                          image={strMealThumb}
-                          title="Paella dish"
-                        />
-                        <CardContent>
-                          <Typography variant="body2" color="textSecondary" component="p">
-                            {strMeal.substring(0, 200)}
-                          </Typography>
-                        </CardContent>
-                      </Card>
+                    <div className="card" style="width: 18rem;">
+  <img src={strMealThumb} className="card-img-top" alt="Thumb" />
+  <div className="card-body">
+    <h3 className="card-text"> {strMeal}</h3>
+  </div>
+</div>
+                   
                     </Paper>
                   </Link>
                 </Grid>
