@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CategoryFilter from '../components/CategoryFilter';
 import { changeFilter } from '../redux/actions/index';
@@ -10,7 +10,7 @@ const Nav = () => {
   const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
   };
-  // const filter = useSelector((state) => state.filter);
+  const filter = useSelector((state) => state.filter);
 
   return (
     <div classNameName="navbar">
@@ -29,7 +29,9 @@ const Nav = () => {
                 <Link to="/about" className="link"><span className="nav-link active" aria-current="page">About</span></Link>
               </li>
               <li className="select-tag">
-                <CategoryFilter handleFilter={handleCategoryChange} className="catField" />
+                <Link to={`/category/${filter}`} className="link">
+                  <CategoryFilter handleFilter={handleCategoryChange} className="catField" />
+                </Link>
               </li>
             </ul>
           </div>

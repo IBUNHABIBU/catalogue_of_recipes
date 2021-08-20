@@ -2,7 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 const About = () => (
-  <div className="container">
+  <div className="container about">
     <p>
       Learn different food recipes via this website
     </p>

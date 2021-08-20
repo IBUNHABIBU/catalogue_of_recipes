@@ -87,3 +87,11 @@ option {
   display: flex;
   justify-content: space-between;
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
