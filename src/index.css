@@ -28,9 +28,13 @@ code {
 
 .link {
   text-decoration: none;
-  color: #482d30;
+  color: #6e6062;
 }
 
+.link:hover {
+  text-decoration: none;
+  color: #4d3e40;
+}
 
 :root {
   --radius: 2px;
@@ -51,28 +55,21 @@ select {
   background-color: #f94f90;
 }
 
-/* Edit option */
 option {
-  /* CSS style here */
   font-size: 2rem;
   background-color: white;
 }
 
-/* Edit selected option */
-/* element  attr    attr value */
-/* option[selected="selected"] {
-  /* CSS style here */
-  /* font-size: 3rem;
-} */ 
 
 .navbar-nav {
   display: flex;
   justify-content: space-between;
   width: 40rem;
   align-items: center;
+  padding-left: 6rem;
 }
 
-.nav-link {
+.container-fluid .navbar-nav .nav-link.active {
   font-size: 1.5rem;
   color: white;
 }
@@ -84,4 +81,9 @@ option {
 .navbar .container-fluid {
   background-color: #f94f90;
   height: 6rem;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
 }
