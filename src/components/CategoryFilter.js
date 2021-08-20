@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { actionTypes } from '../redux/costants';
 // import { Link } from 'react-router-dom';
 
@@ -7,10 +8,13 @@ const CategoryFilter = ({ handleFilter }) => {
   const cat = categories.map((item) => <option value={item} key={item}>{item}</option>);
   return (
     <select onChange={handleFilter}>
-      <option selected="selected">Category</option>
+      <option selected="selected">CATEGORIES</option>
       {cat}
     </select>
   );
 };
 
+CategoryFilter.propTypes = {
+  handleFilter: PropTypes.func.isRequired,
+};
 export default CategoryFilter;

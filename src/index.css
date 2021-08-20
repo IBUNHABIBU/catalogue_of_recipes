@@ -84,14 +84,17 @@ code {
 
 select {
   /* CSS style here */
-  height: 6rem;
-  border: 2px;
+  height: 4rem;
+  border: solid black 2px;
+  width: 14rem;
+  border-radius: 4px;
+  font-size: 1.4rem;
 }
 
 /* Edit option */
 option {
   /* CSS style here */
-  color: red;
+  font-size: 2rem;
 }
 
 /* Edit selected option */
@@ -99,4 +102,12 @@ option {
 option[selected="selected"] {
   /* CSS style here */
   color: blue;
+  font-size: 3rem;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  align-items: center;
 }
