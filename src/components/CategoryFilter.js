@@ -8,7 +8,6 @@ const CategoryFilter = ({ handleFilter }) => {
   const cat = categories.map((item) => <option value={item} key={item}>{item}</option>);
   return (
     <select onChange={handleFilter}>
-      <option selected="selected">CATEGORIES</option>
       {cat}
     </select>
   );
