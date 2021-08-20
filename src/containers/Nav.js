@@ -29,8 +29,8 @@ const Nav = () => {
                 <Link to="/about" className="link"><span className="nav-link active" aria-current="page">About</span></Link>
               </li>
               <li className="select-tag">
-              <CategoryFilter handleFilter={handleCategoryChange} className="catField" />
-              </li> 
+                <CategoryFilter handleFilter={handleCategoryChange} className="catField" />
+              </li>
             </ul>
           </div>
         </div>
@@ -38,7 +38,6 @@ const Nav = () => {
     </div>
   );
 };
-
 
 CategoryFilter.propTypes = {
   handleFilter: PropTypes.func.isRequired,
