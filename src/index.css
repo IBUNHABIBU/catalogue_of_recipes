@@ -28,6 +28,7 @@ code {
 
 .link {
   text-decoration: none;
+  color: #482d30;
 }
 
 
@@ -85,29 +86,44 @@ code {
 select {
   /* CSS style here */
   height: 4rem;
-  border: solid black 2px;
+  border: solid black 1px;
   width: 14rem;
   border-radius: 4px;
   font-size: 1.4rem;
+  background-color: #f94f90;
 }
 
 /* Edit option */
 option {
   /* CSS style here */
   font-size: 2rem;
+  background-color: white;
 }
 
 /* Edit selected option */
 /* element  attr    attr value */
-option[selected="selected"] {
+/* option[selected="selected"] {
   /* CSS style here */
-  color: blue;
-  font-size: 3rem;
-}
+  /* font-size: 3rem;
+} */ 
 
 .navbar-nav {
   display: flex;
   justify-content: space-between;
   width: 40rem;
   align-items: center;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar .container-fluid {
+  background-color: #f94f90;
+  height: 6rem;
 }
