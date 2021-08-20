@@ -12,7 +12,7 @@
      </p>
   </a>
 
-  <h2 align="center"> CATALOGUE OF STATICS REACT CAPSTONE PROJECT</h2>
+  <h2 align="center"> CATALOGUE OF RECIPES REACT CAPSTONE PROJECT</h2>
   <h3 align="center"> Is the food recipe website that you can fetch defferent food recipe from api</h3>
 
   <p align="center">
