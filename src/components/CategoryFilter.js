@@ -1,12 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { actionTypes } from '../redux/costants';
+// import { Link } from 'react-router-dom';
 
-const CategoryFilter = () => (
-  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Action</span></Link></li>
-    <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Another action</span></Link></li>
-    <li><Link to="/category/Beef" className="link"><span className="dropdown-item">Something else here</span></Link></li>
-  </ul>
-);
+const CategoryFilter = ({ handleFilter }) => {
+  const categories = actionTypes.bookCategories;
+  const cat = categories.map((item) => <option value={item} key={item}>{item}</option>);
+  return (
+    <select onChange={handleFilter}>
+      <option selected="selected">Category</option>
+      {cat}
+    </select>
+  );
+};
 
 export default CategoryFilter;

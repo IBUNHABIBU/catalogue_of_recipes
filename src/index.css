@@ -29,3 +29,74 @@ code {
 .link {
   text-decoration: none;
 }
+
+
+:root {
+  --radius: 2px;
+  --baseFg: dimgray;
+  --baseBg: white;
+  --accentFg: #006fc2;
+  --accentBg: #bae1ff;
+}
+
+.drop-down {
+  width: 30rem;
+  position: relative;
+}
+
+.dropdown-select {
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color:blue;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  border-radius: 4px;
+  background-color:white;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-list-items {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+.drop-down:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+  color: red;
+}
+
+select {
+  /* CSS style here */
+  height: 6rem;
+  border: 2px;
+}
+
+/* Edit option */
+option {
+  /* CSS style here */
+  color: red;
+}
+
+/* Edit selected option */
+/* element  attr    attr value */
+option[selected="selected"] {
+  /* CSS style here */
+  color: blue;
+}
