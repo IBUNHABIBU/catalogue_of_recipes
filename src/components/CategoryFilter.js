@@ -7,7 +7,7 @@ const CategoryFilter = ({ handleFilter }) => {
   const categories = all.concat(actionTypes.bookCategories);
   const cat = categories.map((item) => <option value={item} key={item}>{item}</option>);
   return (
-    <select onChange={handleFilter}>
+    <select onClick={handleFilter}>
       {cat}
     </select>
   );

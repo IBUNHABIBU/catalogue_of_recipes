@@ -1,7 +1,7 @@
 import checkPropTypes from 'check-prop-types';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from '../redux/reducers';
-import { middlewares } from './../redux/store';
+import { middlewares } from '../redux/store';
 
 export const checkProps = (component, expectedProps) => {
   const propsError = checkPropTypes(component.propTypes, expectedProps, 'props', component.name);
