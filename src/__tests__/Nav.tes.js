@@ -1,13 +1,16 @@
 /* globals describe, expect, it, beforeEach */
+import { React } from 'react';
 import { shallow } from 'enzyme';
-import { Provider } from 'react-redux';
-import renderer from 'react-test-renderer';
+// // import { Provider } from 'react-redux';
+// import renderer from 'react-test-renderer';
 import Nav from '../containers/Nav';
 
-let wrapper;
-beforeEach(() => {
-  wrapper = shallow(<Provider><Nav /></Provider>);
-});
+
+const setUp = (initialState={}) => {
+  const store = testStore(initialState);
+  const wrapper = shallow(<Nav store={store} />).childAt(0).dive();
+  return wrapper;
+};
 
 describe('Menu navigation', () => {
   it('display the logo', () => {
