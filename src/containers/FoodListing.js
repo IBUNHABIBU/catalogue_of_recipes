@@ -26,7 +26,6 @@ const FoodListing = () => {
                   <div className="card-body">
                     <h5 className="card-title">{strCategory}</h5>
                     <p className="card-text">{strCategoryDescription.substring(0, 150)}</p>
-                    {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
                   </div>
                 </div>
               </Link>
