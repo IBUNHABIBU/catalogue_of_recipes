@@ -2,7 +2,7 @@
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import Nav from './../containers/Nav';
+import Nav from '../containers/Nav';
 
 let wrapper;
 beforeEach(() => {
@@ -15,8 +15,8 @@ describe('Menu navigation', () => {
   });
 
   it('display the menu', () => {
-   expect(wrapper.find('.nav-link.active')).to.have.lengthOf(1);
- });
+    expect(wrapper.find('.nav-link.active')).to.have.lengthOf(1);
+  });
 });
 
 describe('snapshots', () => {

@@ -1,32 +1,33 @@
 import moxios from 'moxios';
-import { testStore } from './../utility/index';
-import { selectCategory, selectMeal, setCategories, changeFilter } from './../redux/actions/index';
+import { testStore } from '../utility/index';
+import {
+  selectCategory, selectMeal, setCategories, changeFilter,
+} from '../redux/actions/index';
 
 describe('Fetch all Categories', () => {
   beforeEach(() => {
     moxios.install();
   });
   afterEach(() => {
-   moxios.uninstall();
- });
- it('Fetch successfully', () => {
-   const expectedResult = {
-    categories:  [{
-      name: 'juma',
-      age: 30,
-    }
-    ]
-   }
+    moxios.uninstall();
+  });
+  it('Fetch successfully', () => {
+    const expectedResult = {
+      categories: [{
+        name: 'juma',
+        age: 30,
+      },
+      ],
+    };
 
-   const store = testStore();
+    const store = testStore();
 
-   moxios.await(() => {
-    const request = moxios.requests.mostRecent();
-    request.respondWith({
-     status: 200,
-     response: expectedResult,
-    })
-   })
- })
-})
-
+    moxios.await(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: expectedResult,
+      });
+    });
+  });
+});

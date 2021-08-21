@@ -1,21 +1,16 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
-import { selectCategory } from '../redux/actions';
 import Loading from './Loading';
+import { fetchByCategory } from '../redux/actions';
 
 const CategoryListing = () => {
   const { categoryName } = useParams();
   const dispatch = useDispatch();
   const foodList = useSelector((state) => state.categories.meals);
-  const fetchByCategory = async () => {
-    const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
-    dispatch(selectCategory(response.data));
-  };
-
+  
   useEffect(() => {
-    fetchByCategory();
+    dispatch(fetchByCategory(categoryName));
   }, [categoryName]);
 
   if (foodList.length === 0) {
