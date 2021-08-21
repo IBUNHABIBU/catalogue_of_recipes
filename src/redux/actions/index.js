@@ -21,8 +21,12 @@ export const selectMeal = (meal) => ({
   payload: meal,
 });
 
+export const fetchProduct = () => async (dispatch) => {
+  const response = await axios.get('https://themealdb.com/api/json/v1/1/categories.php');
+  dispatch(setCategories(response.data));
+};
+
 export const fetchByCategory = (categoryName) => async (dispatch) => {
-  console.log('hwlo');
   const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
   dispatch(selectCategory(response.data));
 };

@@ -8,7 +8,7 @@ const CategoryListing = () => {
   const { categoryName } = useParams();
   const dispatch = useDispatch();
   const foodList = useSelector((state) => state.categories.meals);
-  
+
   useEffect(() => {
     dispatch(fetchByCategory(categoryName));
   }, [categoryName]);
