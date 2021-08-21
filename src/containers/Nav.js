@@ -11,6 +11,7 @@ const Nav = () => {
     dispatch(changeFilter(e.target.value));
   };
   const filter = useSelector((state) => state.filter);
+  const root = filter === 'All' ? '/' : `/category/${filter}`;
 
   return (
     <div classNameName="navbar">
@@ -29,7 +30,7 @@ const Nav = () => {
                 <Link to="/about" className="link"><span className="nav-link active" aria-current="page">About</span></Link>
               </li>
               <li className="select-tag">
-                <Link to={`/category/${filter}`} className="link">
+                <Link to={root} className="link">
                   <CategoryFilter handleFilter={handleCategoryChange} className="catField" />
                 </Link>
               </li>
