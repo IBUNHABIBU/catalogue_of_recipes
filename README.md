@@ -28,11 +28,10 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-* [Story](#story)
-  * [Built With](#built-with)
-  * [Features](#features)
-  * [Requirements](#requirements)
-  * [Useful commands](#useful-commands)
+* [Built With](#built-with)
+* [Features](#features)
+* [Requirements](#requirements)
+* [Useful Commands](#useful-commands)
 * [Contact](#Authors)
 * [Acknowledgements](#Acknowledgements)
 
@@ -47,7 +46,7 @@ Capstone projects are solo projects at the end of the each of the Microverse Mai
 
 ### Project specifications
 
-This is the React capstone is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. 
+This is the React capstone is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. All data are meals recipes that come from TheMealDb API.
 
 ### Features
 
@@ -66,7 +65,7 @@ This project was built using these technologies.
 * The MealDB api
 
 
-### Requirement
+### Requirements
 
 - Node.js
 - NPM
