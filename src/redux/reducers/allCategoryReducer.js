@@ -1,4 +1,4 @@
-import { actionTypes } from '../costants';
+import actionTypes from '../costants';
 
 const initialState = {
   categories: [],

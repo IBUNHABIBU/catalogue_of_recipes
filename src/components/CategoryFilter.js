@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { actionTypes } from '../redux/costants';
+import actionTypes from '../redux/costants';
 
 const CategoryFilter = ({ handleFilter }) => {
   const all = ['All'];
