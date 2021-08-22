@@ -39,20 +39,20 @@
 ## About The Project
 #### Capstone project
 
-Capstone projects are solo projects at the end of the each of the Microverse Main Technical Curriculum sections. Building this project is very important because:
+Capstone projects are solo projects at the end of each of the Microverse Main Technical Curriculum sections. Building this project is very important because:
 
-- It's a real-world-like project, built with business specifications that will look really nice in my portfolio; and
+- It's a real-world-like project, built with business specifications that will look nice in my portfolio; and
 - Get feedback about the achievement of technical and soft skills gained during this section of the program.
 
 ### Project specifications
 
-This is the React capstone is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. All data are meals recipes that come from TheMealDb API.
+This is React capstone project is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. All data are meals recipes that come from TheMealDb API.
 
 ### Features
 
-  - It display all foods meal in all category when visiting the home page.
-  - It display all food meal within the same category when selecting the category by clicking the link or by filter.
-  - It displays the details of  a meal when you select your desired meal.
+  - It displays all foods meal in all categories when visiting the home page.
+  - It displays all food meals within the same category when selecting the category by clicking the link or by filtering.
+  - It displays the details of a meal when you select your desired meal.
 
 
 <!-- BUILD WITH -->
@@ -62,7 +62,7 @@ This project was built using these technologies.
 * React
 * Redux
 * Bootstrap
-* The MealDB api
+* The MealDB API
 
 
 ### Requirements
@@ -71,12 +71,12 @@ This project was built using these technologies.
 - NPM
 - jest
 - Enzymes
-- The MealDb api
+- The MealDb API
 - propTypes
 
 ### How to Install 
 
-To run this locally, clone the repository, navigate to it's containing directory.
+To run this locally, clone the repository, navigate to its containing directory.
 
 #### Follow these commands step by step:-
 
@@ -105,7 +105,7 @@ Enjoy playing it.
 | Command | Description |
 |---------|-------------|
 | `npm install` | Install project dependencies |
-| `npm start` | Build project and open web server running project |
+| `npm start` | Build the project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
 <!-- ### How to play -->
@@ -134,7 +134,7 @@ Give a :star: if you like this project!
 Credits go to ***Mr Eric Mbouwe** who helped me when I'm stuck.
 all my standup team for their help.
 
-- The [The MealDb API](https://www.themealdb.com/api.php) api for using their api for free
+- The [The MealDb API](https://www.themealdb.com/api.php) API for using their API for free
 - All TSE that review my project
 - All those helped me to resolve bugs
 
