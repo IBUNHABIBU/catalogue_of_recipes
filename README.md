@@ -38,13 +38,22 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Is the website that fetch different food recipe from the MealDb api
+#### Capstone project
+
+Capstone projects are solo projects at the end of the each of the Microverse Main Technical Curriculum sections. Building this project is very important because:
+
+- It's a real-world-like project, built with business specifications that will look really nice in my portfolio; and
+- Get feedback about the achievement of technical and soft skills gained during this section of the program.
+
+### Project specifications
+
+This is the React capstone is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. 
 
 ### Features
 
-  - It display all foods meal in all category
-  - It display all food meal within the same category
-  - It display a meal when selected
+  - It display all foods meal in all category when visiting the home page.
+  - It display all food meal within the same category when selecting the category by clicking the link or by filter.
+  - It displays the details of  a meal when you select your desired meal.
 
 
 <!-- BUILD WITH -->
@@ -52,13 +61,18 @@ Is the website that fetch different food recipe from the MealDb api
 
 This project was built using these technologies.
 * React
+* Redux
+* Bootstrap
+* The MealDB api
 
 
 ### Requirement
 
 - Node.js
 - NPM
-- big.js
+- jest
+- Enzymes
+- The MealDb api
 - propTypes
 
 ### How to Install 
@@ -118,10 +132,12 @@ Give a :star: if you like this project!
 
 
 ## Acknowledgments
-Credits go to  <!--Mr Christian Ceamatu who helped me when I'm stuck. -->
+Credits go to ***Mr Eric Mbouwe** who helped me when I'm stuck.
 all my standup team for their help.
 
 - The [The MealDb API](https://www.themealdb.com/api.php) api for using their api for free
+- All TSE that review my project
+- All those helped me to resolve bugs
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
