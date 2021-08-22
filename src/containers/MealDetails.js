@@ -7,7 +7,7 @@ import { featchMealDetails } from '../redux/actions/index';
 const MealDetails = () => {
   const { mealId } = useParams();
   const dispatch = useDispatch();
-  const details = useSelector((state) => state.details.meals);
+  const details = useSelector((state) => state.selected.meals);
 
   useEffect(() => {
     dispatch(featchMealDetails(mealId));

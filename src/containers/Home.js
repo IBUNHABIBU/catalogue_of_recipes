@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchProduct } from '../redux/actions/index';
-import FoodListing from './FoodListing';
+import AllFoodListing from './AllFoodListing';
+import { fetchAllCategories } from '../redux/actions/index';
 
 const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchProduct());
+    dispatch(fetchAllCategories());
   }, []);
 
   return (
     <div>
-      <FoodListing />
+      <AllFoodListing />
     </div>
   );
 };

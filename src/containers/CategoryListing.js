@@ -7,7 +7,8 @@ import { fetchByCategory } from '../redux/actions';
 const CategoryListing = () => {
   const { categoryName } = useParams();
   const dispatch = useDispatch();
-  const foodList = useSelector((state) => state.categories.meals);
+  const foodList = useSelector((state) => state.selected.meals);
+  console.log(foodList);
 
   useEffect(() => {
     dispatch(fetchByCategory(categoryName));
