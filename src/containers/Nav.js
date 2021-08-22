@@ -1,16 +1,16 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CategoryFilter from '../components/CategoryFilter';
+import { fetchByCategory } from '../redux/actions/apifetch';
 import { changeFilter } from '../redux/actions/index';
 
 const Nav = () => {
   const dispatch = useDispatch();
   const handleCategoryChange = (e) => {
     dispatch(changeFilter(e.target.value));
+    dispatch(fetchByCategory(e.target.value));
   };
-  const filter = useSelector((state) => state.filter);
-  const root = filter === 'All' ? '/' : `/category/${filter}`;
 
   return (
     <div classNameName="navbar">
@@ -29,7 +29,7 @@ const Nav = () => {
                 <Link to="/about" className="link"><span className="nav-link active about" aria-current="page">About</span></Link>
               </li>
               <li className="select-tag">
-                <Link to={root} className="link">
+                <Link to="/" className="link">
                   <CategoryFilter handleFilter={handleCategoryChange} className="catField" />
                 </Link>
               </li>

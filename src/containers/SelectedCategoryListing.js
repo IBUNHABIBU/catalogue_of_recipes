@@ -13,7 +13,7 @@ const selectedCategoryListing = () => {
     dispatch(fetchByCategory(categoryName));
   }, [categoryName]);
 
-  if (foodList.length === 0) {
+  if (foodList === null) {
     return (
       <Loading />
     );
@@ -48,11 +48,6 @@ const selectedCategoryListing = () => {
   );
   return (
     <div>
-      <h1 align="center">
-        {
-          `${categoryName}  category`
-        }
-      </h1>
       { displayByCategory }
     </div>
   );
