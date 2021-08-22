@@ -8,6 +8,7 @@ const selectedCategoryListing = () => {
   const { categoryName } = useParams();
   const dispatch = useDispatch();
   const foodList = useSelector((state) => state.selected.meals);
+  const filter = useSelector((state) => state.filter);
 
   useEffect(() => {
     dispatch(fetchByCategory(categoryName));
@@ -48,6 +49,11 @@ const selectedCategoryListing = () => {
   );
   return (
     <div>
+      <h1 align="center">
+        {
+          `${categoryName || filter} Category`
+        }
+      </h1>
       { displayByCategory }
     </div>
   );

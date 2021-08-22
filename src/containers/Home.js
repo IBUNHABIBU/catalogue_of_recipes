@@ -7,9 +7,6 @@ import SelectedCategoryListing from './SelectedCategoryListing';
 const Home = () => {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filter);
-  const allcat = useSelector((state) => state.allFoods);
-  console.log(filter);
-  console.log('All cat', allcat);
 
   useEffect(() => {
     dispatch(fetchAllCategories());
