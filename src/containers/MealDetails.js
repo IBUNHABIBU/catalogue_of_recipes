@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Loading from './Loading';
-import { featchMealDetails } from '../redux/actions/index';
+import { featchMealDetails } from '../redux/actions/apifetch';
 
 const MealDetails = () => {
   const { mealId } = useParams();

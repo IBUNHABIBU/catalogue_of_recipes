@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import AllCategoryListing from './AllCategoryListing';
-import { fetchAllCategories } from '../redux/actions/index';
+import { fetchAllCategories } from '../redux/actions/apifetch';
 
 const Home = () => {
   const dispatch = useDispatch();
