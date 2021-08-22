@@ -33,7 +33,7 @@
 * [Features](#features)
 * [Requirements](#requirements)
 * [Useful Commands](#useful-commands)
-* [Live Link](#Link-to)
+* [Live Link](#Live-link)
 * [Contact](#Authors)
 * [Acknowledgements](#Acknowledgements)
 
@@ -115,7 +115,9 @@ Enjoy playing it.
 <!-- CONTACT -->
 
 
-## Link to [Live Demo ](https://slm-foodrecipe.herokuapp.com/)
+## Live link
+
+[Live Demo ](https://slm-foodrecipe.herokuapp.com/) of the project
 
 ## [The video presentation of the project](https://drive.google.com/file/d/16leZ7lN7JCTHHRE_zRBQvQamPGTWHz9W/view?usp=sharing) 
 
