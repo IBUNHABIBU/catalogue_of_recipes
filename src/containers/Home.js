@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import AllFoodListing from './AllFoodListing';
+import AllCategoryListing from './AllCategoryListing';
 import { fetchAllCategories } from '../redux/actions/index';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <AllFoodListing />
+      <AllCategoryListing />
     </div>
   );
 };
