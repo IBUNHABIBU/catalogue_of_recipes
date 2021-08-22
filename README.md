@@ -6,7 +6,7 @@
 <br />
 
 <p align="center">
-  <a href="git@github.com:IBUNHABIBU/catalogue_of_statistic.git">
+  <a href="git@github.com:IBUNHABIBU/catalogue_of_recipes.git">
     <p align="center">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React" />
      </p>
@@ -16,14 +16,14 @@
   <h3 align="center"> Is the food recipe website that you can fetch defferent food recipe from api</h3>
 
   <p align="center">
-    <a href="https://github.com/IBUNHABIBU/catalogue_of_statistic/issues">Report Bug</a>
-    <a href="https://github.com/IBUNHABIBU/catalogue_of_statistic/issues">Request Feature</a>
+    <a href="https://github.com/IBUNHABIBU/catalogue_of_recipes/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/catalogue_of_recipes/issues">Request Feature</a>
   </p>
 </p>
 
 
-![screenshot](https://github.com/IBUNHABIBU/catalogue_of_statistic/blob/feature/public/home.PNG)
-<!-- ![screenshot](https://github.com/IBUNHABIBU/catalogue_of_statistic/blob/testing/public/calculator.PNG) -->
+![screenshot](https://github.com/IBUNHABIBU/catalogue_of_recipes/blob/feature/public/home.PNG)
+<!-- ![screenshot](https://github.com/IBUNHABIBU/catalogue_of_recipes/blob/testing/public/calculator.PNG) -->
 
 ## Table of Contents
 
@@ -68,11 +68,11 @@ To run this locally, clone the repository, navigate to it's containing directory
 #### Follow these commands step by step:-
 
 `
-git clone git@github.com:IBUNHABIBU/catalogue_of_statistic.git
+git clone git@github.com:IBUNHABIBU/catalogue_of_recipes.git
 `
 
 `
-cd catalogue_of_statistic
+cd catalogue_of_recipes
 `
 
  `$npm install `
@@ -125,14 +125,14 @@ all my standup team for their help.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/catalogue_of_statistic.svg?style=flat-square
-[contributors-url]: https://github.com/IBUNHABIBU/catalogue_of_statistic/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/catalogue_of_statistic.svg?style=flat-square
-[forks-url]: https://github.com/IBUNHABIBU/catalogue_of_statistic/network/members
-[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/catalogue_of_statistic.svg?style=flat-square
-[stars-url]: https://github.com/IBUNHABIBU/catalogue_of_statistic/stargazers
-[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/catalogue_of_statistic.svg?style=flat-square
-[issues-url]: https://github.com/IBUNHABIBU/catalogue_of_statistic/issues
+[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/catalogue_of_recipes.svg?style=flat-square
+[contributors-url]: https://github.com/IBUNHABIBU/catalogue_of_recipes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/catalogue_of_recipes.svg?style=flat-square
+[forks-url]: https://github.com/IBUNHABIBU/catalogue_of_recipes/network/members
+[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/catalogue_of_recipes.svg?style=flat-square
+[stars-url]: https://github.com/IBUNHABIBU/catalogue_of_recipes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/catalogue_of_recipes.svg?style=flat-square
+[issues-url]: https://github.com/IBUNHABIBU/catalogue_of_recipes/issues
 
 ## 📝 License
 
