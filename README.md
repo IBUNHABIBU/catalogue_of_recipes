@@ -130,7 +130,7 @@ Enjoy playing it.
 Give a :star: if you like this project!
 
 
-## Acknowledgments
+## Acknowledgements
 Credits go to ***Mr Eric Mbouwe** who helped me when I'm stuck.
 all my standup team for their help.
 
