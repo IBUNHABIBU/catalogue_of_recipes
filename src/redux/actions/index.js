@@ -6,18 +6,13 @@ export const setCategories = (meals) => ({
   payload: meals,
 });
 
-export const selectCategory = (meal) => ({
-  type: actionTypes.SELECT_CATEGORY,
-  payload: meal,
-});
-
 export const changeFilter = (filter) => ({
   type: actionTypes.CHANGE_FILTER,
   payload: filter,
 });
 
-export const selectMeal = (meal) => ({
-  type: actionTypes.SELECT_MEAL,
+export const selectItem = (meal) => ({
+  type: actionTypes.SELECT_ITEM,
   payload: meal,
 });
 
@@ -28,10 +23,10 @@ export const fetchAllCategories = () => async (dispatch) => {
 
 export const fetchByCategory = (categoryName) => async (dispatch) => {
   const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
-  dispatch(selectMeal(response.data));
+  dispatch(selectItem(response.data));
 };
 
 export const featchMealDetails = (mealId) => async (dispatch) => {
   const response = await axios.get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
-  dispatch(selectMeal(response.data));
+  dispatch(selectItem(response.data));
 };

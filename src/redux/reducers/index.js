@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import filterReducer from './filterReducer';
 import allCategoryReducer from './allCategoryReducer';
-import mealDetailsReducer from './mealDetailsReducer';
+import selectReducer from './selectReducer';
 
 const reducers = combineReducers({
   allFoods: allCategoryReducer,
   filter: filterReducer,
-  selected: mealDetailsReducer,
+  selected: selectReducer,
 });
 
 export default reducers;
