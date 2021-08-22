@@ -47,7 +47,7 @@ Capstone projects are solo projects at the end of each of the Microverse Main Te
 
 ### Project specifications
 
-This is React capstone project is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. All data are meals recipes that come from TheMealDb API.
+This is React-redux capstone project is based on a catalogue of recipes. I have built a catalogue, that is, a browsable list of items that you can filter and access to the details of one item. All data are meals recipes that come from TheMealDb API.
 
 ### Features
 
