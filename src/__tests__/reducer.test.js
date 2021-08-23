@@ -1,7 +1,7 @@
 import allCategoryReducer from '../redux/reducers/allCategoryReducer';
 import { actionTypes } from '../redux/costants';
 import filterReducer from '../redux/reducers/filterReducer';
-import mealCategoryReducer from '../redux/reducers/mealCategoryReducer';
+import selectReducer from '../redux/reducers/selectReducer';
 
 describe('Reducers', () => {
   describe('allCategoryReducer', () => {
@@ -45,13 +45,13 @@ describe('Reducers', () => {
     });
   });
 
-  describe('mealCategoryReducer', () => {
+  describe('selectedCategory', () => {
     it('It should return default state when no action', () => {
       const defaultState = {
         meals: [],
       };
 
-      const newState = mealCategoryReducer(undefined, {});
+      const newState = selectReducer(undefined, {});
       expect(newState).toEqual({
         meals: [],
       });
@@ -67,40 +67,9 @@ describe('Reducers', () => {
           },
         ],
       };
-      const newState = mealCategoryReducer(undefined, {
-        type: actionTypes.SELECTED_CATEGORY,
+      const newState = selectReducer(undefined, {
+        type: actionTypes.SELECTED_ITEM,
         payload: data,
-      });
-
-      expect(newState).toEqual(data);
-    });
-  });
-
-  describe('mealDetails', () => {
-    it('It should return default state when no action', () => {
-      const defaultState = {
-        meals: [],
-      };
-
-      const newState = mealCategoryReducer(undefined, {});
-      expect(newState).toEqual({
-        meals: [],
-      });
-    });
-
-    it('should return new state when apply action', () => {
-      const data = {
-        meals: [
-          {
-            id: 1,
-            name: 'Januari',
-            description: 'Lorem ipsum',
-          },
-        ],
-      };
-      const newState = mealCategoryReducer(undefined, {
-        type: actionTypes.SELECTED_MEAL,
-        payload: { ...state, ...data },
       });
 
       expect(newState).toEqual(data);
