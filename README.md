@@ -119,7 +119,7 @@ Enjoy playing it.
 
 [Live Demo ](https://slm-foodrecipe.herokuapp.com/) of the project
 
-## [The video presentation of the project](https://drive.google.com/file/d/16leZ7lN7JCTHHRE_zRBQvQamPGTWHz9W/view?usp=sharing) 
+## [The video presentation of the project](https://www.youtube.com/watch?v=VW7r0R3_HqY&t=20s) 
 
 ## Authors
 
@@ -137,8 +137,8 @@ Give a :star: if you like this project!
 ## Acknowledgements
 Credits go to 
 - [Mr Eric Mbouwe](https://github.com/EricMbouwe), [Emmanuel Kamala](https://github.com/emmanuelkamala) and [Marcelo Araújo](https://github.com/marcelomaidden)(Microverse students) for their help to resolve the bugs.
-- all my standup team for their help.
-- The [The MealDb API](https://www.themealdb.com/api.php) API for using their API for free.
+- All my standup team for their help.
+- [The MealDb API](https://www.themealdb.com/api.php) API for using their API for free.
 - All TSE who reviewed my project.
 - All those helped me to resolve bugs.
 
