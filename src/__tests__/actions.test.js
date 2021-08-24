@@ -1,6 +1,6 @@
 import moxios from 'moxios';
 import { testStore } from '../utility/index';
-import { fetchAllCategories } from './../redux/actions/apifetch';
+import { fetchAllCategories } from '../redux/actions/apifetch';
 
 describe('Fetch all Categories', () => {
   beforeEach(() => {
@@ -28,9 +28,9 @@ describe('Fetch all Categories', () => {
       });
     });
     return store.dispatch(fetchAllCategories())
-        .then(() => {
-            const newState = store.getState();
-            expect(newState.posts).toBe(expectedState);
-        })
+      .then(() => {
+        const newState = store.getState();
+        expect(newState.posts).toBe(expectedState);
+      });
   });
 });
