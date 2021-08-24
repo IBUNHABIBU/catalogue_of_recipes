@@ -13,7 +13,7 @@ const Nav = () => {
   };
 
   return (
-    <div classNameName="navbar">
+    <div className="main">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link to="/" className="link"><span className="navbar-brand logo">RECIPES ZONE</span></Link>
