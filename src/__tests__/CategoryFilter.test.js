@@ -1,6 +1,6 @@
 import React from 'react';
 import checkProps from '../utility/index';
-
+import { renderer } from 'react-test-renderer';
 import CategoryFilter from '../components/CategoryFilter';
 
 describe('Checking Proptypes', () => {
@@ -14,4 +14,8 @@ describe('Checking Proptypes', () => {
     const propsError = checkProps(CategoryFilter, expectedProp);
     expect(propsError).toBeUndefined();
   });
+  it('it render correctly', () => {
+    const tree = renderer.create(<CategoryFilter />).toJSON();
+    expect(tree).toMatchSnapshot();
+   })
 });
