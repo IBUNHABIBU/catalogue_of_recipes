@@ -14,8 +14,8 @@ describe('Fetch all Categories', () => {
   it('Fetch successfully', () => {
     const expectedResult = {
       categories: [{
-        name: 'juma',
-        age: 30,
+        idCategory: '1',
+        strCategory: 'Beef',
       },
       ],
     };

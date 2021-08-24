@@ -16,13 +16,13 @@ describe('Reducers', () => {
     it('should return new state when give action', () => {
       const data = {
         categories: [{
-          id: 2,
-          name: 'Juma',
-          description: 'Lorem ipsum',
+          idMeal: '1',
+          strMeal: 'Januari',
+          strCategory: 'Lorem ipsum',
         }],
       };
       const newState = allCategoryReducer(undefined, {
-        type: actionTypes.SET_RECIPE,
+        type: actionTypes.SET_CATEGORIES,
         payload: data,
       });
       expect(newState).toEqual(data);
@@ -31,9 +31,9 @@ describe('Reducers', () => {
 
   describe('filterReducer', () => {
     it('should return default state when no action', () => {
-      const defaultState = 'Beef';
+      const defaultState = 'All';
       const newState = filterReducer(undefined, {});
-      expect(newState).toBe('Beef');
+      expect(newState).toBe('All');
     });
 
     it('should return new state when given the action', () => {
@@ -61,14 +61,14 @@ describe('Reducers', () => {
       const data = {
         meals: [
           {
-            id: 1,
-            name: 'Januari',
-            description: 'Lorem ipsum',
+            idMeal: 1,
+            strMeal: 'Januari',
+            strCategory: 'Lorem ipsum',
           },
         ],
       };
       const newState = selectReducer(undefined, {
-        type: actionTypes.SELECTED_ITEM,
+        type: actionTypes.SELECT_ITEM,
         payload: data,
       });
 
