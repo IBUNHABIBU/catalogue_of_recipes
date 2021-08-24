@@ -7,7 +7,7 @@ describe('Checking Proptypes', () => {
   it('It should not throw a warning', () => {
     const expectedProp = {
       handleFilter: () => {
-
+        
       },
     };
 
