@@ -1,4 +1,3 @@
-/* globals describe, expect, it, beforeEach */
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import About from '../containers/About';

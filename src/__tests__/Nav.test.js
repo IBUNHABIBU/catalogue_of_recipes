@@ -8,7 +8,8 @@ import { testStore } from '../utility';
 describe('Test the Nav', () => {
   it('renders conrrectly', () => {
     const store = testStore({});
-    const tree = renderer.create(<Provider store={store}><Router><Nav /></Router></Provider>).toJSON();
+    const component = <Provider store={store}><Router><Nav /></Router></Provider>
+    const tree = renderer.create(component).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

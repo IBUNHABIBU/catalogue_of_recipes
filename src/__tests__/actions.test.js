@@ -30,7 +30,7 @@ describe('Fetch all Categories', () => {
     return store.dispatch(fetchAllCategories())
       .then(() => {
         const newState = store.getState();
-        expect(newState.posts).toBe(expectedState);
+        expect(newState.posts).toBe(expectedResult);
       });
   });
 });

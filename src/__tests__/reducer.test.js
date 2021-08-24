@@ -1,7 +1,7 @@
 import allCategoryReducer from '../redux/reducers/allCategoryReducer';
-import { actionTypes } from '../redux/costants';
 import filterReducer from '../redux/reducers/filterReducer';
 import selectReducer from '../redux/reducers/selectReducer';
+import actionTypes from './../redux/costants/index';
 
 describe('Reducers', () => {
   describe('allCategoryReducer', () => {
@@ -33,7 +33,7 @@ describe('Reducers', () => {
     it('should return default state when no action', () => {
       const defaultState = 'All';
       const newState = filterReducer(undefined, {});
-      expect(newState).toBe('All');
+      expect(newState).toBe(defaultState);
     });
 
     it('should return new state when given the action', () => {
@@ -52,9 +52,7 @@ describe('Reducers', () => {
       };
 
       const newState = selectReducer(undefined, {});
-      expect(newState).toEqual({
-        meals: [],
-      });
+      expect(newState).toEqual(defaultState);
     });
 
     it('should return new state when apply action', () => {
