@@ -1,8 +1,6 @@
 import moxios from 'moxios';
 import { testStore } from '../utility/index';
-import {
-  selectCategory, selectMeal, setCategories, changeFilter,
-} from '../redux/actions/index';
+import { fetchAllCategories } from './../redux/actions/apifetch';
 
 describe('Fetch all Categories', () => {
   beforeEach(() => {
@@ -29,5 +27,10 @@ describe('Fetch all Categories', () => {
         response: expectedResult,
       });
     });
+    return store.dispatch(fetchAllCategories())
+        .then(() => {
+            const newState = store.getState();
+            expect(newState.posts).toBe(expectedState);
+        })
   });
 });
