@@ -1,7 +1,7 @@
 import allCategoryReducer from '../redux/reducers/allCategoryReducer';
 import filterReducer from '../redux/reducers/filterReducer';
 import selectReducer from '../redux/reducers/selectReducer';
-import actionTypes from './../redux/costants/index';
+import actionTypes from '../redux/costants/index';
 
 describe('Reducers', () => {
   describe('allCategoryReducer', () => {
