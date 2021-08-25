@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 import Nav from '../containers/Nav';
-import { testStore } from '../utility';
+import testStore from '../utility/index';
 
 describe('Test the Nav', () => {
   it('renders conrrectly', () => {

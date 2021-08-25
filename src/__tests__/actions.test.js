@@ -1,6 +1,6 @@
 import moxios from 'moxios';
-import { testStore } from '../utility/index';
 import { fetchAllCategories } from '../redux/actions/apifetch';
+import testStore from '../utility/index';
 
 describe('Fetch all Categories', () => {
   beforeEach(() => {
