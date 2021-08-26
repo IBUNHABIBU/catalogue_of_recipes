@@ -1,4 +1,3 @@
-import { PropTypes } from 'prop-types';
 import checkPropTypes from 'check-prop-types';
 import CategoryFilter from '../components/CategoryFilter';
 
