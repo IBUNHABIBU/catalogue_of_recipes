@@ -19,7 +19,7 @@ const AllCategoryListing = () => {
             idCategory, strCategory, strCategoryThumb, strCategoryDescription,
           } = meal;
           return (
-            <div className="col-12 col-lg-3 col-md-6" key={idCategory} data-testid='allcat'>
+            <div className="col-12 col-lg-3 col-md-6" key={idCategory} data-testid="allcat">
               <Link to={`/category/${strCategory}`} className="link">
                 <div className="card">
                   <img src={strCategoryThumb} className="card-img-top" alt="Thumb" />

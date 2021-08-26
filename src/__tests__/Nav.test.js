@@ -1,13 +1,13 @@
 import React from 'react';
-import { renderWithRedux } from './../utility/index';
 import { cleanup } from '@testing-library/react';
-import Nav from './../containers/Nav';
 import { BrowserRouter } from 'react-router-dom';
+import renderWithRedux from '../utility/index';
+import Nav from '../containers/Nav';
 
 describe('Test the loading component', () => {
- afterEach(cleanup)
- it('renders the loading spinner', () => {
-  const { queryByRole } = renderWithRedux(<BrowserRouter><Nav /></BrowserRouter>)
-  expect(queryByRole('Link')).toBeDefined()
- })
-})
+  afterEach(cleanup);
+  it('renders the loading spinner', () => {
+    const { queryByRole } = renderWithRedux(<BrowserRouter><Nav /></BrowserRouter>);
+    expect(queryByRole('Link')).toBeDefined();
+  });
+});
