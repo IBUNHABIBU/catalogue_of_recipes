@@ -23,8 +23,7 @@
 </p>
 
 
-![screenshot](https://github.com/IBUNHABIBU/catalogue_of_recipes/blob/feature/public/home.PNG)
-<!-- ![screenshot](https://github.com/IBUNHABIBU/catalogue_of_recipes/blob/testing/public/calculator.PNG) -->
+![screenshot](https://github.com/IBUNHABIBU/catalogue_of_recipes/blob/react-redux-mealDb-fetch-api/public/home.PNG)
 
 ## Table of Contents
 
